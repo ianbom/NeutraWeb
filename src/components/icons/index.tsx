@@ -70,9 +70,16 @@ export const Calendar = (p: P) => (
   <svg viewBox="0 0 256 256" fill="currentColor" {...p}><g><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"></path><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></g></svg>
 );
 
-export const NeutraMark = (p: P) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><g><path d="M 12.264 2 L 15.739 8.81 L 13.579 12.955 L 10.408 6.634 L 4.203 18.78 L 0 18.78 L 8.563 2 Z M 15.436 22 L 11.736 22 L 8.26 15.191 L 10.42 11.046 L 13.59 17.367 L 19.797 5.22 L 24 5.22 Z" fill="currentColor"></path></g></svg>
+export const LiniWebMark = (p: P) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
+    <g>
+      <path d="M5 3a1.5 1.5 0 0 0-1.5 1.5v14A2.5 2.5 0 0 0 6 21h13.5a1.5 1.5 0 0 0 1.5-1.5v-2a1.5 1.5 0 0 0-1.5-1.5H8a1 1 0 0 1-1-1V4.5A1.5 1.5 0 0 0 5 3Z" />
+      <path d="M12 4a1.5 1.5 0 0 1 1.5-1.5h6A1.5 1.5 0 0 1 21 4v6a1.5 1.5 0 0 1-1.5 1.5h-6A1.5 1.5 0 0 1 12 10V4Z" opacity="0.35" />
+    </g>
+  </svg>
 );
+
+export const NeutraMark = LiniWebMark;
 
 export const FigmaLogo = (p: P) => (
   <svg viewBox="0 0 30 44" fill="none" {...p}><g clipPath="url(#figma-clip)"><path d="M14.787.198v14.616h7.345c4.047 0 7.345-3.268 7.345-7.316 0-4.031-3.282-7.316-7.345-7.316h-7.345v.016Z" fill="#FF7262"></path><path d="M15.136 22.15c0-4.031 3.281-7.316 7.345-7.316 4.047 0 7.345 3.268 7.345 7.316 0 4.032-3.28 7.317-7.345 7.317-4.047 0-7.345-3.285-7.345-7.317Z" fill="#1ABCFE"></path><path d="M.463 36.766c0-4.032 3.281-7.316 7.345-7.316h7.345v7.316c0 4.031-3.281 7.316-7.345 7.316S.463 40.814.463 36.766Z" fill="#0ACF83"></path><path d="M.463 7.535c0 4.031 3.281 7.316 7.345 7.316h7.345V.219H7.808C3.744.219.463 3.487.463 7.535Z" fill="#F24E1E"></path><path d="M.463 22.15c0 4.032 3.281 7.317 7.345 7.317h7.345V14.834H7.808c-4.064 0-7.345 3.285-7.345 7.316Z" fill="#A259FF"></path></g><defs><clipPath id="figma-clip"><path fill="#fff" transform="translate(.463 .182)" d="M0 0h29.014v43.636H0z"></path></clipPath></defs></svg>

@@ -1,126 +1,96 @@
-export interface CaseItem { title: string; href: string; image: string; tags: string[] }
+export interface CaseItem { title: string; href: string; image: string; tags: string[]; bg?: string }
 
 export const cases: CaseItem[] = [
   {
-    "title": "Codify",
-    "href": "https://codify.framer.website/",
-    "image": "/images/C46rY8czFx8HjeyGBBr7SnlupM.png",
-    "tags": [
-      "Agency",
-      "Portfolio",
-      "Saas"
-    ]
+    title: "VYREN",
+    href: "https://vyren-ecom.vercel.app/",
+    image: "/portfolio/vyren-ecom.webp",
+    tags: ["E-Commerce"],
+    bg: "#1b3b2b",
   },
   {
-    "title": "Taskify",
-    "href": "https://taskify.framer.website/",
-    "image": "/images/1EbsYvM5Gyb15ZgRtX8UF7b474.png",
-    "tags": [
-      "Business",
-      "AI",
-      "Saas"
-    ]
+    title: "ATELIER",
+    href: "https://arvena.vercel.app/",
+    image: "/portfolio/atelier.webp",
+    tags: ["Situs Web"],
+    bg: "#7047eb",
   },
   {
-    "title": "Flexify",
-    "href": "https://flexify.framer.website/",
-    "image": "/images/ymBaWuyG4ivgK2aSTlKsfHD7cvo.png",
-    "tags": [
-      "Saas",
-      "AI",
-      "Business"
-    ]
+    title: "GALERYA",
+    href: "https://galerya-living.vercel.app/",
+    image: "/portfolio/galerya.webp",
+    tags: ["Situs Web"],
+    bg: "#1e3a5f",
   },
   {
-    "title": "Landify",
-    "href": "https://landify.framer.website/",
-    "image": "/images/mt2fx3NVaLd8pGv0ERaLEJmc4Y.png",
-    "tags": [
-      "Business",
-      "Portfolio",
-      "Landing"
-    ]
+    title: "NOIREL",
+    href: "https://noirel-studio.vercel.app/",
+    image: "/portfolio/noirel.webp",
+    tags: ["Situs Web"],
+    bg: "#b45309",
   },
   {
-    "title": "Nexus AI",
-    "href": "https://nexusai.framer.website/",
-    "image": "/images/kg3eNccUy41ywZMReAJv2nO80gc.png",
-    "tags": [
-      "AI",
-      "Saas",
-      "Business"
-    ]
+    title: "NOIRVA",
+    href: "https://studio-noirva.vercel.app/",
+    image: "/portfolio/noirva.webp",
+    tags: ["Situs Web"],
+    bg: "#0f766e",
   },
   {
-    "title": "Todofusion",
-    "href": "https://todofusion.framer.website/",
-    "image": "/images/qqgo5MbuI7VXnfS1E4CwLgt7BU.png",
-    "tags": [
-      "AI",
-      "Business",
-      "Agency"
-    ]
+    title: "NOIRVA / Studio",
+    href: "https://noirva-studio.vercel.app/",
+    image: "/portfolio/noirva-2.webp",
+    tags: ["Situs Web"],
+    bg: "#581c87",
   },
   {
-    "title": "Dailyhub",
-    "href": "https://dailyhub.framer.website/",
-    "image": "/images/5YDgdnJABj1LnhD0J97vOs77WT0.png",
-    "tags": [
-      "Inpiration",
-      "Business",
-      "Portfolio"
-    ]
+    title: "VANTRA",
+    href: "https://studio-vantra.vercel.app/",
+    image: "/portfolio/vantra.webp",
+    tags: ["Situs Web"],
+    bg: "#881337",
   },
   {
-    "title": "Agentify",
-    "href": "https://agentify.framer.website/",
-    "image": "/images/EAVpHGzyjYZNvhLdyFyjdCQh2g.png",
-    "tags": [
-      "Agency",
-      "Portfolio",
-      "Landing"
-    ]
+    title: "NORTHFORM",
+    href: "https://northform-shoes.vercel.app/",
+    image: "/portfolio/northform-ecom.webp",
+    tags: ["E-Commerce"],
+    bg: "#2563eb",
   },
   {
-    "title": "Protify",
-    "href": "https://protify.framer.website/",
-    "image": "/images/ej8HnS9XzMfiwiz0vXjX9qD5ak.png",
-    "tags": [
-      "Business",
-      "Agency",
-      "Portfolio"
-    ]
+    title: "LIFETIME",
+    href: "https://life-livin.vercel.app/",
+    image: "/portfolio/lifetime.webp",
+    tags: ["Situs Web"],
+    bg: "#284e3a",
   },
   {
-    "title": "Startify",
-    "href": "https://startify.framer.website/",
-    "image": "/images/CxSD1QDn6z4wikL2GLa2SwbCuRU.png",
-    "tags": [
-      "Agency",
-      "Business",
-      "Inpiration"
-    ]
+    title: "LIFTCO",
+    href: "https://vinch.vercel.app/",
+    image: "/portfolio/liftco.webp",
+    tags: ["Situs Web"],
+    bg: "#c2410c",
   },
   {
-    "title": "Flowboard",
-    "href": "https://flowboard.framer.website/",
-    "image": "/images/qsdJ8knAhEtEnNjCY0YjDGLL6k.png",
-    "tags": [
-      "Business",
-      "Saas",
-      "Saas"
-    ]
+    title: "SPIL",
+    href: "https://spill-ship.vercel.app/",
+    image: "/portfolio/spil.webp",
+    tags: ["Situs Web"],
+    bg: "#0284c7",
   },
   {
-    "title": "Platify",
-    "href": "https://platify.framer.website/",
-    "image": "/images/wjRuNy2Cgt6nJA5YB9jClMY08Y.png",
-    "tags": [
-      "Saas",
-      "Agency",
-      "Business"
-    ]
-  }
+    title: "FOLVIA",
+    href: "https://folvia.vercel.app/",
+    image: "/portfolio/folvia.webp",
+    tags: ["E-Commerce"],
+    bg: "#334155",
+  },
 ];
 
-export const homeCases = cases.slice(0, 6);
+export const homeCases: CaseItem[] = [
+  cases[0], // VYREN
+  cases[1], // ATELIER
+  cases[4], // NOIRVA
+  cases[3], // NOIREL
+];
+

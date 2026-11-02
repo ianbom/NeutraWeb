@@ -19,15 +19,15 @@ export default function Home() {
         <Features />
         <Services />
         <Statement />
-        <section aria-label="Building Digital Excellence with Neutra." className="w-full bg-surface">
+        <section aria-label="Karya Digital yang Kami Bangun." className="w-full bg-surface">
           <Container className="section-y flex flex-col">
             <SectionHeader
               phone="sm"
-              title="Building Digital Excellence with Neutra."
-              description="Discover the innovative marketing strategies that set Neutra apart, driving success in the digital landscape."
+              title="Building Digital Excellence with LiniWeb."
+              description="Jelajahi berbagai website yang kami rancang dengan mengutamakan kebutuhan setiap bisnis."
             />
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 md:gap-y-16">
-              {homeCases.slice(0, 4).map((c) => (
+              {homeCases.map((c) => (
                 <CaseCard key={c.title} item={c} />
               ))}
             </div>

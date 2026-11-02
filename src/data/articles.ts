@@ -12,705 +12,464 @@ export interface Article {
   body: ArticleBlock[];
 }
 
-// Scraped from the reference CMS; body html is trusted static content.
 export const articles: Article[] = [
   {
-    "slug": "crafting-exceptional-user-experiences",
-    "title": "Crafting Exceptional User Experiences",
-    "author": "David Johnson",
-    "category": "UX Design",
-    "readTime": 2,
-    "date": "Nov 15, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/HvEjI5nnCrtIvttqSWsyCuVM.jpg",
-    "excerpt": "In the ever-changing landscape of digital design, UX design stands as a pillar of creating experiences that resonate.",
-    "body": [
+    slug: "pentingnya-website-profesional-untuk-bisnis",
+    title: "Pentingnya Website Profesional untuk Meningkatkan Kredibilitas Bisnis di Era Digital",
+    author: "Tim Editorial LiniWeb",
+    category: "Strategi Bisnis",
+    readTime: 4,
+    date: "2 Nov 2026",
+    avatar: "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
+    image: "/images/articles/article-1.jpg",
+    excerpt: "Di era digital, website bukan lagi sekadar pelengkap, melainkan etalase utama yang menentukan kepercayaan calon pelanggan terhadap bisnis Anda.",
+    body: [
       {
-        "tag": "p",
-        "html": "In today's digital realm, crafting exceptional user experiences isn't a choice – it's a necessity. User Experience (UX) design is at the heart of creating products and websites that not only captivate users but also cater to their needs."
+        tag: "p",
+        html: "Di era serba digital saat ini, kesan pertama calon pelanggan terhadap bisnis Anda hampir selalu dimulai dari internet. Ketika seseorang mendengar nama merek atau produk Anda, langkah pertama yang sering mereka lakukan adalah mencarinya melalui Google. Tanpa website yang resmi dan profesional, calon pembeli berpotensi meragukan keabsahan usaha Anda."
       },
       {
-        "tag": "p",
-        "html": "The art of UX design extends far beyond aesthetics; it involves understanding user behaviors, conducting research, and implementing intuitive interfaces. From wireframing to prototyping, each stage is a puzzle piece in the larger UX picture."
+        tag: "h3",
+        html: "Membangun Kepercayaan Sejak Detik Pertama"
       },
       {
-        "tag": "p",
-        "html": "In this post, we delve into the world of UX design, exploring the methodologies and strategies that professionals employ to create experiences that leave users awestruck. Whether you're a seasoned designer or just dipping your toes into the UX waters, you'll find insights, tips, and inspiration to level up your UX game."
+        tag: "p",
+        html: "Website profesional dengan tampilan rapi, navigasi jelas, dan informasi kontak yang transparan memberikan rasa aman kepada pengunjung. Pelanggan merasa lebih tenang bertransaksi dengan perusahaan yang memiliki domain resmi dan identitas visual yang solid dibandingkan akun media sosial semata."
       },
       {
-        "tag": "p",
-        "html": "Discover the secrets of designing for delight, learn how to harness the power of user personas, and witness the impact of responsive and inclusive design. Join us on a journey through the ever-evolving landscape of UX design, where creativity and empathy converge to shape remarkable digital experiences."
+        tag: "p",
+        html: "<br>"
+      },
+      {
+        tag: "h3",
+        html: "Pusat Kendali Pemasaran Digital Anda"
+      },
+      {
+        tag: "p",
+        html: "Berbeda dengan media sosial yang algoritmanya bisa berubah sewaktu-waktu, website adalah aset digital mandiri milik Anda seutuhnya. Anda memegang kendali penuh atas bagaimana produk ditampilkan, bagaimana cerita merek disampaikan, serta data pengunjung yang masuk untuk kebutuhan pengembangan bisnis jangka panjang."
+      },
+      {
+        tag: "p",
+        html: "Investasi pada pembuatan website berkualitas tinggi adalah langkah mendasar untuk meletakkan fondasi pertumbuhan bisnis yang berkelanjutan dan kompetitif di pasar modern."
       }
     ]
   },
   {
-    "slug": "ui-design-elevating-experiences",
-    "title": "UI Design: Elevating Experiences",
-    "author": "Anastasia Solovyova",
-    "category": "UI Design",
-    "readTime": 7,
-    "date": "Oct 12, 2023",
-    "avatar": "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
-    "image": "/images/4cF7vTWqSD6k0W86ffeveQjsc2Q.png",
-    "excerpt": "In the digital realm, UI design guides user journeys. Crafting remarkable experiences is at the core of web design.",
-    "body": [
+    slug: "panduan-memilih-jasa-pembuatan-website",
+    title: "Panduan Lengkap Memilih Jasa Pembuatan Website yang Tepat dan Terpercaya",
+    author: "Konsultan Web LiniWeb",
+    category: "Tips & Panduan",
+    readTime: 5,
+    date: "29 Okt 2026",
+    avatar: "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
+    image: "/images/articles/article-2.jpg",
+    excerpt: "Memilih mitra pengembang web memerlukan ketelitian agar hasil website sesuai visi bisnis, tepat waktu, dan memberikan return on investment optimal.",
+    body: [
       {
-        "tag": "p",
-        "html": "Master UI design to guide users effectively and create engaging digital experiences. Your website's success hinges on its visual language and intuitive interactions. Elevate user experiences with our UI Design insights."
+        tag: "p",
+        html: "Menemukan vendor atau agency pembuatan website sering kali membingungkan karena banyaknya pilihan dengan rentang harga yang sangat variatif. Agar tidak salah pilih, Anda memerlukan panduan strategis dalam mengevaluasi calon mitra kerja."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Periksa Portofolio dan Bukti Nyata"
       },
       {
-        "tag": "h3",
-        "html": "Navigating Through UI Design"
+        tag: "p",
+        html: "Lihat karya nyata yang pernah dikerjakan oleh vendor tersebut. Buka website portofolio mereka secara langsung melalui laptop dan smartphone. Perhatikan apakah tampilannya responsif, kecepatannya baik, dan alur pemesanannya mudah dipahami."
       },
       {
-        "tag": "p",
-        "html": "A guide to mastering the art of UI design:"
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<strong>1. User-Centric Approach:</strong> Start with empathy, tailor the design to user needs."
+        tag: "h3",
+        html: "Transparansi Biaya dan Layanan Purna Jual"
       },
       {
-        "tag": "p",
-        "html": "<strong>2. Visual Hierarchy:</strong> Create a clear path with typography and layout."
+        tag: "p",
+        html: "Pastikan rincian biaya mencakup domain, hosting, sertifikat SSL, pemeliharaan rutin, serta dukungan teknis pasca-peluncuran. Jasa pembuatan website profesional selalu memberikan rincian transparan tanpa ada biaya tersembunyi di kemudian hari."
       },
       {
-        "tag": "p",
-        "html": "<strong>3. Consistency Rules:</strong> Foster familiarity for intuitive navigation."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>4. The Visual Tale:</strong> Choose visuals that convey identity and emotion."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>5. Mobile Magic:</strong> Ensure mobile responsiveness is a necessity."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>6. Delight in Details:</strong> Microinteractions enhance user journeys."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>7. Inclusivity Matters:</strong> Embrace accessibility for all users."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>8. Feedback Loop:</strong> Continuous refinement is your compass for exceptional UI design."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "The Influence of UI Design"
-      },
-      {
-        "tag": "p",
-        "html": "UI design is the unspoken language connecting your brand with users. It tells a story, invokes emotions, and forges trust. When done right, UI design captivates audiences, narrates stories, and leaves indelible imprints."
+        tag: "p",
+        html: "Komunikasi dua arah yang responsif dan pemahaman mendalam tentang model bisnis Anda adalah tanda utama agensi yang layak dijadikan mitra jangka panjang."
       }
     ]
   },
   {
-    "slug": "the-ux-revolution-shaping-digital-experiences",
-    "title": "The UX Revolution: Shaping Digital Experiences",
-    "author": "Anastasia Solovyova",
-    "category": "UX Design",
-    "readTime": 4,
-    "date": "Nov 24, 2023",
-    "avatar": "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
-    "image": "/images/vss98kimC7Rm3BkWtOJ4E7PF0.png",
-    "excerpt": "User Experience (UX) design is at the forefront of creating digital products that users love.",
-    "body": [
+    slug: "perbedaan-company-profile-landing-page-toko-online",
+    title: "Mengenal Perbedaan Website Company Profile, Landing Page, dan Toko Online",
+    author: "Tim Editorial LiniWeb",
+    category: "Web Design",
+    readTime: 4,
+    date: "25 Okt 2026",
+    avatar: "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
+    image: "/images/articles/article-3.jpg",
+    excerpt: "Pahami perbedaan fungsi, struktur, dan target audiens dari masing-masing jenis website agar anggaran pengembangan Anda tepat sasaran.",
+    body: [
       {
-        "tag": "p",
-        "html": "User Experience (UX) design is at the forefront of creating digital products that users love. In this post, we explore the ongoing revolution in UX design and its profound impact on shaping digital experiences."
+        tag: "p",
+        html: "Setiap jenis website memiliki peran yang berbeda dalam ekosistem bisnis Anda. Memilih tipe website yang tepat sejak awal akan menghemat waktu dan memastikan tujuan pemasaran tercapai secara efektif."
       },
       {
-        "tag": "p",
-        "html": "Discover how empathy-driven design, user research, and accessibility considerations are revolutionizing the UX landscape. We delve into the principles that guide UX designers to create interfaces that are not only visually appealing but also highly intuitive and inclusive."
+        tag: "h3",
+        html: "1. Website Company Profile"
       },
       {
-        "tag": "p",
-        "html": "Whether you're a seasoned UX designer or just starting your journey, this post will provide valuable insights into the evolving world of UX design, where users' needs and experiences take center stage."
+        tag: "p",
+        html: "Berfungsi sebagai profil digital lengkap yang memuat visi, misi, layanan, portofolio, dan sejarah perusahaan. Sangat cocok untuk bisnis B2B, konsultan, kontraktor, dan perusahaan jasa yang ingin membangun reputasi kuat di mata klien korporat."
+      },
+      {
+        tag: "p",
+        html: "<br>"
+      },
+      {
+        tag: "h3",
+        html: "2. Landing Page Promosi"
+      },
+      {
+        tag: "p",
+        html: "Website satu halaman yang dirancang khusus untuk satu tujuan tunggal (Call-to-Action), seperti mengumpulkan prospek kontak, pendaftaran webinar, atau penjualan produk spesifik dari iklan berbayar (Meta Ads/Google Ads)."
+      },
+      {
+        tag: "p",
+        html: "<br>"
+      },
+      {
+        tag: "h3",
+        html: "3. Toko Online (E-Commerce)"
+      },
+      {
+        tag: "p",
+        html: "Platform lengkap dengan katalog produk, keranjang belanja, integrasi payment gateway otomatis, serta kalkulasi ongkos kirim real-time untuk transaksi jual beli barang secara mandiri."
       }
     ]
   },
   {
-    "slug": "mastering-ui-design-trends-a-deep-dive",
-    "title": "Mastering UI Design Trends: A Deep Dive",
-    "author": "David Johnson",
-    "category": "UI Design",
-    "readTime": 2,
-    "date": "Nov 24, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/5GbIrngxJhowImxRpAWUx622xc.png",
-    "excerpt": "User Interface (UI) design is an art that constantly evolves. To create digital experiences that captivate and engage.",
-    "body": [
+    slug: "strategi-desain-website-responsif",
+    title: "Strategi Desain Web Responsif: Menjangkau Pelanggan di Semua Perangkat",
+    author: "Spesialis UI/UX LiniWeb",
+    category: "Web Design",
+    readTime: 4,
+    date: "21 Okt 2026",
+    avatar: "/images/v9Uq1lUqZg61tJ253P5096o.png",
+    image: "/images/articles/article-4.jpg",
+    excerpt: "Lebih dari 70% lalu lintas web kini berasal dari perangkat seluler. Desain web responsif memastikan kenyamanan maksimal di layar ponsel maupun desktop.",
+    body: [
       {
-        "tag": "p",
-        "html": "User Interface (UI) design is an art that constantly evolves. To create digital experiences that captivate and engage, it's crucial to stay current with the latest UI design trends. In this blog post, we'll immerse ourselves in the world of UI design, exploring the trends that are reshaping user interfaces and setting the stage for a user-centered digital future."
+        tag: "p",
+        html: "Saat ini pengguna internet mengakses website melalui berbagai ukuran layar, mulai dari smartphone berlayar kompak, tablet, hingga monitor komputer berukuran besar. Website yang kaku dan sulit dibaca di smartphone akan segera ditinggalkan pengunjung."
       },
       {
-        "tag": "p",
-        "html": "From neumorphism to micro-interactions, we'll dissect the key elements of modern UI design. You'll gain insights into best practices and learn how to implement these trends effectively to create visually stunning and user-friendly interfaces."
+        tag: "h3",
+        html: "Pendekatan Mobile-First"
       },
       {
-        "tag": "p",
-        "html": "If you're passionate about UI design or simply want to elevate your design skills, this post is a treasure trove of knowledge. Join us in this deep dive into the ever-evolving landscape of UI design trends."
+        tag: "p",
+        html: "Merancang website dengan pendekatan mobile-first memprioritaskan konten esensial dan navigasi yang mudah disentuh dengan ibu jari. Tombol CTA dibuat cukup besar, ukuran teks nyaman dibaca tanpa zoom, dan menu dibuat simpel."
+      },
+      {
+        tag: "p",
+        html: "<br>"
+      },
+      {
+        tag: "h3",
+        html: "Dampak Positif terhadap Peringkat Google"
+      },
+      {
+        tag: "p",
+        html: "Google secara tegas menerapkan Mobile-First Indexing. Artinya, performa dan kemudahan tampilan website versi seluler menjadi tolok ukur utama algoritma Google dalam menentukan peringkat hasil pencarian."
       }
     ]
   },
   {
-    "slug": "the-power-of-responsive-web-design",
-    "title": "The Power of Responsive Web Design",
-    "author": "David Johnson",
-    "category": "Web design",
-    "readTime": 3,
-    "date": "Nov 23, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/gEuLZWqISbowA6Z5TeEzISEsgs.jpg",
-    "excerpt": "In today's digital landscape, where users access websites from various devices and screen sizes.",
-    "body": [
+    slug: "optimasi-kecepatan-loading-website",
+    title: "Cara Efektif Mengoptimalkan Kecepatan Loading Website agar Pengunjung Tidak Kabur",
+    author: "Technical Lead LiniWeb",
+    category: "Teknologi & SEO",
+    readTime: 5,
+    date: "18 Okt 2026",
+    avatar: "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
+    image: "/images/articles/article-5.jpg",
+    excerpt: "Kecepatan akses adalah kunci pengalaman pengguna dan konversi. Pelajari teknik penting meningkatkan loading time website Anda.",
+    body: [
       {
-        "tag": "p",
-        "html": "In today's digital landscape, where users access websites from various devices and screen sizes, responsive web design has emerged as a critical element in creating a seamless online experience. This blog post delves into the world of responsive design, shedding light on its importance and benefits."
+        tag: "p",
+        html: "Studi membuktikan bahwa pengguna akan meninggalkan website yang membutuhkan waktu loading lebih dari 3 detik. Setiap detik keterlambatan berdampak langsung pada hilangnya potensi penjualan dan kepuasan pengunjung."
       },
       {
-        "tag": "p",
-        "html": "Responsive web design is not just about adjusting layout elements; it's about optimizing user experience. Learn how responsive design techniques can enhance engagement, reduce bounce rates, and improve SEO. We'll explore best practices, tools, and frameworks that empower web designers to craft sites that adapt and thrive in this multi-device era."
+        tag: "h3",
+        html: "Kompresi Gambar dan Format Modern"
       },
       {
-        "tag": "p",
-        "html": "So, if you're looking to stay ahead in the ever-evolving realm of web design and provide your audience with accessible and engaging web experiences, this post is your guiding star."
+        tag: "p",
+        html: "Gambar berukuran besar sering menjadi penyebab utama website lambat. Gunakan format modern seperti WebP atau AVIF yang menawarkan kompresi superior tanpa menurunkan ketajaman visual. Terapkan juga teknik lazy loading untuk memuat gambar saat di-scroll."
+      },
+      {
+        tag: "p",
+        html: "<br>"
+      },
+      {
+        tag: "h3",
+        html: "Hosting Cepat dan Pemanfaatan CDN"
+      },
+      {
+        tag: "p",
+        html: "Pilih penyedia server hosting yang handal dengan dukungan Content Delivery Network (CDN). CDN mendistribusikan aset statis website ke server terdekat dengan lokasi pengunjung, sehingga waktu respon menjadi jauh lebih singkat."
       }
     ]
   },
   {
-    "slug": "mastering-the-craft-of-user-experience-design",
-    "title": "Mastering the Craft of User Experience Design",
-    "author": "David Johnson",
-    "category": "UX Design",
-    "readTime": 3,
-    "date": "Nov 15, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/32Ao0YOpynUtm9KTYphzi9oT2eQ.jpg",
-    "excerpt": "In the ever-changing landscape of digital design, UX design stands as a pillar of creating experiences that resonate.",
-    "body": [
+    slug: "membangun-toko-online-ramah-pengguna",
+    title: "Langkah Membangun Toko Online (E-Commerce) yang Ramah Pengguna dan Menghasilkan Penjualan",
+    author: "Tim Editorial LiniWeb",
+    category: "E-Commerce",
+    readTime: 6,
+    date: "14 Okt 2026",
+    avatar: "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
+    image: "/images/articles/article-6.jpg",
+    excerpt: "Membangun toko online sukses bukan hanya soal memajang produk, tetapi menghadirkan pengalaman belanja yang cepat, aman, dan tanpa hambatan.",
+    body: [
       {
-        "tag": "p",
-        "html": "Uncover the world of UX design, where user satisfaction is the ultimate goal. Discover how exceptional UX design bridges the gap between users and products, fostering unparalleled experiences. Dive into the art of crafting compelling user-centric designs."
+        tag: "p",
+        html: "Toko online yang efektif harus mampu membimbing calon pembeli dari tahap melihat produk hingga menyelesaikan pembayaran dengan mulus. Hambatan sekecil apa pun pada proses checkout dapat memicu keranjang belanja ditinggalkan (cart abandonment)."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Navigasi dan Fitur Pencarian yang Cerdas"
       },
       {
-        "tag": "h3",
-        "html": "Mastering the Craft"
+        tag: "p",
+        html: "Kategorikan produk secara logis dan sediakan fitur pencarian serta filter yang responsif. Pelanggan yang dapat menemukan produk impian mereka dalam hitungan detik memiliki kecenderungan transaksi jauh lebih tinggi."
       },
       {
-        "tag": "p",
-        "html": "UX design involves a dynamic blend of psychology, creativity, and technology. It's more than making things look good; it's about making things work beautifully."
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Metode Pembayaran Lengkap dan Terintegrasi"
       },
       {
-        "tag": "h3",
-        "html": "The Process Unveiled"
-      },
-      {
-        "tag": "p",
-        "html": "From research and wireframing to prototypes and testing, the UX design process is a journey. Every step is a careful dance between understanding the user and crafting solutions."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "User-Centered Philosophy"
-      },
-      {
-        "tag": "p",
-        "html": "A key tenet of UX design is empathy. It's about placing yourself in the shoes of the user and building experiences that make their lives easier, more enjoyable, and more efficient."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "The Power of UX Design"
-      },
-      {
-        "tag": "p",
-        "html": "Great UX design can transform a casual visitor into a loyal customer. It ensures that a website or app is easy to navigate, pleasant to use, and ultimately fulfills the user's needs."
+        tag: "p",
+        html: "Sediakan berbagai opsi pembayaran populer di Indonesia, mulai dari QRIS, Virtual Account bank nasional, e-wallet, hingga kartu kredit melalui payment gateway resmi yang aman dan terpercaya."
       }
     ]
   },
   {
-    "slug": "revolutionizing-ux-design",
-    "title": "Revolutionizing UX Design",
-    "author": "David Johnson",
-    "category": "UX Design",
-    "readTime": 6,
-    "date": "Nov 5, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/KjsfCaVMvkjlLs2CFlHb4HZqE.jpg",
-    "excerpt": "Learn how exceptional UX design bridges the gap between users and products, fostering exceptional experiences.",
-    "body": [
+    slug: "pentingnya-seo-on-page-sejak-awal",
+    title: "Mengapa Optimasi SEO On-Page Harus Diterapkan Sejak Awal Pembuatan Website?",
+    author: "Technical Lead LiniWeb",
+    category: "Teknologi & SEO",
+    readTime: 5,
+    date: "10 Okt 2026",
+    avatar: "/images/v9Uq1lUqZg61tJ253P5096o.png",
+    image: "/images/articles/article-7.jpg",
+    excerpt: "Struktur website yang ramah mesin pencari sejak hari pertama peluncuran akan mendatangkan calon pelanggan organik secara berkelanjutan.",
+    body: [
       {
-        "tag": "p",
-        "html": "UX design is more than aesthetics. It's the science of enhancing user satisfaction by improving the usability, accessibility, and overall interaction between the user and the product."
+        tag: "p",
+        html: "Banyak pemilik bisnis baru memikirkan Search Engine Optimization (SEO) setelah website selesai dibuat. Padahal, memasukkan arsitektur SEO sejak tahap perencanaan akan jauh lebih hemat biaya dan memberikan hasil jangka panjang yang optimal."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Struktur URL dan Heading yang Rapi"
       },
       {
-        "tag": "h3",
-        "html": "The Evolution of UX Design"
+        tag: "p",
+        html: "Struktur hierarki halaman yang jelas (H1, H2, H3), URL yang bersih dan deskriptif, serta peta situs (sitemap.xml) yang otomatis terbarui membantu perayap Google memahami topik bisnis Anda dengan akurat."
       },
       {
-        "tag": "p",
-        "html": "From pen and paper to cutting-edge digital interfaces, the journey of UX design has transformed how we interact with technology. In today's digital age, UX design reigns supreme."
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Meta Tag dan Optimasi Konten Lokal"
       },
       {
-        "tag": "h3",
-        "html": "Defining User-Centered Excellence"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>1. Empathy Matters:</strong> Begin by understanding user needs, desires, and pain points."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>2. Seamless Navigation:</strong> Design intuitive journeys that guide users effortlessly."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>3. Accessibility for All:</strong> Prioritize inclusivity to ensure that your design is available to everyone."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>4. Human-Centered Innovation:</strong> Merge creativity and data to create user-centric solutions."
-      },
-      {
-        "tag": "p",
-        "html": "<strong>5. Iteration Is Key:</strong> Continuously refine and adapt your design based on user feedback."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "The Impact of Great UX Design"
-      },
-      {
-        "tag": "p",
-        "html": "The influence of UX design extends beyond digital interfaces. It shapes emotions, builds trust, and ultimately defines the success of any product or service. When UX design is executed masterfully, it transforms mere users into loyal advocates."
+        tag: "p",
+        html: "Setiap halaman perlu dilengkapi dengan meta title dan meta description yang menarik. Bagi bisnis lokal, penyertaan kata kunci geografis dan schema markup akan meningkatkan peluang muncul di pencarian lokal Google Maps."
       }
     ]
   },
   {
-    "slug": "10-web-design-trends-to-watch-in-2023",
-    "title": "10 Web Design Trends to Watch in 2023",
-    "author": "Olena Kucherenko",
-    "category": "Web design",
-    "readTime": 7,
-    "date": "Nov 22, 2023",
-    "avatar": "/images/xqL7sYq8l87tH9MKnFSG3CU0Y.png",
-    "image": "/images/CteRnkedt2SHUnA2jjD4Ds7Y.jpg",
-    "excerpt": "In the ever-changing realm of web design, it's vital to keep your websites visually appealing and user-friendly.",
-    "body": [
+    slug: "memilih-domain-dan-hosting-bisnis",
+    title: "Panduan Memilih Nama Domain dan Hosting yang Tepat untuk Fondasi Website Bisnis",
+    author: "Konsultan Web LiniWeb",
+    category: "Tips & Panduan",
+    readTime: 4,
+    date: "6 Okt 2026",
+    avatar: "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
+    image: "/images/articles/article-8.jpg",
+    excerpt: "Nama domain adalah alamat identitas bisnis Anda, sedangkan hosting adalah rumahnya. Jangan salah menentukan fondasi dasar website Anda.",
+    body: [
       {
-        "tag": "p",
-        "html": "In the ever-evolving landscape of web design, staying ahead of the curve is crucial for ensuring that your websites not only look appealing but also provide top-notch user experiences. As we embark on a new year, it's the perfect time to take a sneak peek into the web design trends that are set to make waves in 2023."
+        tag: "p",
+        html: "Memilih domain dan hosting adalah salah satu keputusan pertama dalam memulai website. Pilihan yang keliru dapat menimbulkan masalah performa, gangguan downtime, hingga kesulitan branding di masa depan."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Tips Memilih Nama Domain yang Tepat"
       },
       {
-        "tag": "h3",
-        "html": "1. Dark Mode Dominance"
+        tag: "p",
+        html: "Pilihlah nama domain yang singkat, mudah dieja, mudah diingat, dan mencerminkan nama merek bisnis Anda. Hindari penggunaan angka dan tanda hubung (-) yang membingungkan pengunjung ketika diucapkan secara lisan."
       },
       {
-        "tag": "p",
-        "html": "Dark mode is no longer a trend; it's become an expectation. More and more websites and applications are embracing dark themes to reduce eye strain and improve readability in low-light conditions. Expect to see even more creative and seamless dark mode implementations."
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Kriteria Memilih Paket Hosting Handal"
       },
       {
-        "tag": "h3",
-        "html": "2. 3D Elements"
-      },
-      {
-        "tag": "p",
-        "html": "Enhancing the user experience through 3D elements has been an ongoing trend, and it's only going to get better. 3D graphics and illustrations will continue to be used for adding depth, interactivity, and realism to websites."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "3. Micro Interactions"
-      },
-      {
-        "tag": "p",
-        "html": "Micro interactions, such as animated icons, hover effects, and subtle transitions, are all the rage. They enhance user engagement and create a delightful user experience. Designers are getting more creative in adding these tiny but impactful details."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "4. Inclusive Design"
-      },
-      {
-        "tag": "p",
-        "html": "Web design is increasingly focusing on inclusivity and accessibility. In 2023, it's expected that more websites will prioritize accessibility, ensuring that everyone can use and navigate them regardless of their abilities or disabilities."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "5. AI-Powered Chatbots"
-      },
-      {
-        "tag": "p",
-        "html": "AI-driven chatbots are transforming user interactions. These bots provide instant support, answer queries, and enhance user engagement. Expect to see more websites integrating AI chatbots for improved customer service."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "6. Minimalistic UI"
-      },
-      {
-        "tag": "p",
-        "html": "Less is more. Minimalistic user interfaces continue to be popular for their clean and uncluttered design. The focus is on content and usability, making it easier for users to find what they're looking for."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "7. Abstract Art and Fluid Shapes"
-      },
-      {
-        "tag": "p",
-        "html": "Designers are increasingly using abstract art and fluid shapes to add a unique visual appeal to websites. These elements break away from the conventional grid layouts, adding a sense of creativity and freedom."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "8. Voice User Interfaces (VUI)"
-      },
-      {
-        "tag": "p",
-        "html": "As voice-controlled devices become more prevalent, websites are incorporating voice user interfaces to cater to voice search and commands. This trend is set to grow in 2023."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "9. Data-Driven Design"
-      },
-      {
-        "tag": "p",
-        "html": "Leveraging data and analytics to make design decisions is a growing trend. Using user data to personalize content and design ensures a more engaging and tailored user experience."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "10. Sustainability and Eco-Friendly Design"
-      },
-      {
-        "tag": "p",
-        "html": "The focus on environmental consciousness is making its way into web design. Expect to see more websites embracing eco-friendly design practices and promoting sustainability."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "As we move into 2023, web designers have exciting opportunities to create visually stunning, interactive, and inclusive websites. Staying updated with these trends and implementing them creatively will be key to delivering web experiences that captivate and engage users."
+        tag: "p",
+        html: "Perhatikan jaminan uptime minimal 99.9%, ketersediaan backup otomatis harian, sertifikat SSL gratis, serta tim layanan pelanggan yang siaga 24/7 untuk membantu saat terjadi kendala teknis."
       }
     ]
   },
   {
-    "slug": "the-art-of-responsive-web-design",
-    "title": "The Art of Responsive Web Design",
-    "author": "David Johnson",
-    "category": "Web design",
-    "readTime": 5,
-    "date": "Dec 27, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/QvhBmuXxN4j9e9lYPSdADXY9mE.jpg",
-    "excerpt": "User experience is king in the digital age, making responsive web design vital for seamless websites.",
-    "body": [
+    slug: "tanda-waktu-tepat-redesign-website",
+    title: "5 Tanda Jelas Bahwa Website Bisnis Anda Sudah Saatnya Melakukan Redesign",
+    author: "Spesialis UI/UX LiniWeb",
+    category: "Strategi Bisnis",
+    readTime: 4,
+    date: "2 Okt 2026",
+    avatar: "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
+    image: "/images/articles/article-9.jpg",
+    excerpt: "Website yang usang dapat menurunkan citra profesional perusahaan. Kenali tanda-tanda utama kapan website Anda perlu diperbarui.",
+    body: [
       {
-        "tag": "p",
-        "html": "In the digital age, user experience reigns supreme, and responsive web design has become the cornerstone of creating seamless and engaging websites. With the proliferation of various devices and screen sizes, ensuring that your web content adapts gracefully is no longer a nice-to-have but a necessity."
+        tag: "p",
+        html: "Tren desain web dan ekspektasi pengguna berkembang sangat cepat. Website yang dirancang beberapa tahun lalu mungkin sudah tidak relevan lagi dengan kebutuhan pasar saat ini."
       },
       {
-        "tag": "p",
-        "html": "Responsive web design is not merely a technical aspect, it's an art that combines functionality with aesthetics. It's about making sure your website looks and works beautifully on everything from large desktop monitors to the smallest smartphone screens."
+        tag: "h3",
+        html: "Tanda-Tanda Website Perlu Diperbarui"
       },
       {
-        "tag": "p",
-        "html": "To achieve this, consider these key principles:"
+        tag: "ol",
+        html: "<li><strong>Tampilan Tidak Responsif:</strong> Website terasa sulit dinavigasi pada layar ponsel pintar modern.</li><li><strong>Loading Sangat Lambat:</strong> Waktu buka halaman lambat akibat teknologi lama yang tidak dioptimalkan.</li><li><strong>Tingkat Konversi Rendah:</strong> Pengunjung banyak yang datang tetapi tidak ada yang menghubungi atau membeli.</li><li><strong>Informasi Sudah Usang:</strong> Sulit memperbarui teks atau konten portofolio karena sistem CMS yang kaku.</li><li><strong>Desain Ketinggalan Zaman:</strong> Visual website terlihat kuno dibandingkan dengan kompetitor di industri yang sama.</li>"
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<strong>1. Fluid Grids:</strong> Embrace the concept of fluid grids that automatically adjust to fit different screen sizes. This foundational technique ensures that content is displayed in a visually pleasing and organized manner."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>2. Flexible Images:</strong> Utilize flexible images that scale without losing their quality. This ensures that images are not too large or too small on various devices, optimizing load times and visual appeal."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>3. Media Queries:</strong> Implement media queries to define specific styles for different screen sizes. This allows your website to adapt its layout and design based on the user's device, providing an optimal experience."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>4. Mobile-First Approach:</strong> Start by designing for mobile devices and progressively enhance the design for larger screens. This approach ensures that your website is efficient and user-friendly from the ground up."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>5. Performance Optimization:</strong> Remember that responsive design isn't just about looks; it's about speed. Optimize your website's performance to ensure quick load times, reducing bounce rates and keeping users engaged."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "<strong>6. User-Centric Design:</strong> Always prioritize the user's experience. Test your responsive design thoroughly on various devices to ensure that it provides a smooth and intuitive interaction."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "By mastering the art of responsive web design, you can create websites that not only adapt to the evolving digital landscape but also deliver outstanding user experiences. Whether you're a seasoned web designer or just starting your journey, embracing responsive design principles is the key to success in the ever-changing world of web development."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "Remember, the web is no longer confined to a single screen size. It's a diverse landscape of devices and interactions, and responsive design is your passport to this exciting digital world."
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "We hope you found this post insightful. Stay tuned for more web design tips and best practices in our upcoming blog posts!"
+        tag: "p",
+        html: "Melakukan redesign bukan hanya meremajakan tampilan, tetapi juga menata ulang strategi agar website kembali menjadi mesin penghasil prospek bisnis yang efektif."
       }
     ]
   },
   {
-    "slug": "boosting-website-performance-with-smart-design-practices",
-    "title": "Boosting Website Performance with Smart Design Practices",
-    "author": "Olena Kucherenko",
-    "category": "Web design",
-    "readTime": 6,
-    "date": "Dec 6, 2023",
-    "avatar": "/images/xqL7sYq8l87tH9MKnFSG3CU0Y.png",
-    "image": "/images/IBw4Si6UN9kcQoOJzmLjrFRQ.jpg",
-    "excerpt": "In the modern world, managing time efficiently is a skill that can significantly impact your personal and professional life.",
-    "body": [
+    slug: "menjaga-keamanan-website-bisnis",
+    title: "Langkah Proaktif Menjaga Keamanan Website Bisnis dari Serangan Siber dan Malware",
+    author: "Technical Lead LiniWeb",
+    category: "Keamanan & Maintenance",
+    readTime: 5,
+    date: "28 Sep 2026",
+    avatar: "/images/v9Uq1lUqZg61tJ253P5096o.png",
+    image: "/images/articles/article-10.jpg",
+    excerpt: "Keamanan website bukan hanya soal melindungi data perusahaan, tetapi juga menjaga kepercayaan data privasi pelanggan Anda.",
+    body: [
       {
-        "tag": "p",
-        "html": "In the ever-evolving landscape of web design, staying ahead of the curve is crucial for ensuring that your websites not only look appealing but also provide top-notch user experiences. The performance of a website is a key factor in user satisfaction, and there are several smart design practices that can significantly enhance website performance."
+        tag: "p",
+        html: "Setiap hari ribuan website menjadi sasaran serangan siber otomatis. Bisnis skala kecil hingga menengah sering menjadi target empuk karena dianggap memiliki sistem proteksi yang minim."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Wajib Menggunakan Sertifikat SSL (HTTPS)"
       },
       {
-        "tag": "p",
-        "html": "Here are some actionable tips to boost your website's performance through design:"
+        tag: "p",
+        html: "Sertifikat SSL mengenkripsi data yang dikirimkan antara browser pengunjung dan server website. Tanpa SSL, browser modern akan menampilkan peringatan 'Not Secure' yang langsung menakuti calon pelanggan."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "ol",
-        "html": "<li data-preset-tag=\"p\"><p><strong>Optimize Images:</strong> Large, unoptimized images can slow down your website. Use image compression and appropriate formats to ensure fast loading times without sacrificing image quality.</p></li><li data-preset-tag=\"p\"><p><strong>Prioritize Content:</strong> Use lazy loading techniques to load content as the user scrolls. Prioritize the loading of visible content to create a smoother initial experience.</p></li><li data-preset-tag=\"p\"><p><strong>Minimize HTTP Requests:</strong> Reducing the number of HTTP requests can drastically improve loading times. Combine CSS and JavaScript files and minimize the use of external resources.</p></li><li data-preset-tag=\"p\"><p><strong>Leverage Caching:</strong> Implement browser caching to store static assets locally. This reduces the need to re-download assets on subsequent visits.</p></li><li data-preset-tag=\"p\"><p><strong>Use Content Delivery Networks (CDNs):</strong> CDNs distribute your website's content across multiple servers, reducing the physical distance between the server and the user and improving load times.</p></li><li data-preset-tag=\"p\"><p><strong>Responsive Design:</strong> Ensure your website is responsive and mobile-friendly. A responsive design adapts to different screen sizes, improving the user experience on various devices.</p></li><li data-preset-tag=\"p\"><p><strong>Reduce Animations and Transitions:</strong> While animations and transitions can enhance user interactions, overuse can slow down a website. Use them sparingly and consider performance implications.</p></li><li data-preset-tag=\"p\"><p><strong>Limit Third-Party Scripts:</strong> External scripts from ads, social media, or analytics can add significant overhead. Only include scripts that are essential for your website's functionality.</p></li><li data-preset-tag=\"p\"><p><strong>Monitor and Optimize:</strong> Regularly monitor your website's performance with tools like Google PageSpeed Insights or GTmetrix. Address any issues or bottlenecks promptly.</p></li><li data-preset-tag=\"p\"><p><strong>Content Delivery:</strong> Serve content from servers geographically closer to your target audience. This reduces latency and speeds up content delivery.</p></li>"
+        tag: "h3",
+        html: "Pembaruan Berkala dan Backup Otomatis"
       },
       {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "p",
-        "html": "By implementing these design practices, you can create websites that not only look stunning but also perform exceptionally well. Your users will appreciate the fast load times and smooth interactions, leading to higher engagement and satisfaction."
+        tag: "p",
+        html: "Selalu perbarui core framework, plugin, dan modul website ke versi terbaru untuk menutup celah keamanan (vulnerability). Lakukan juga backup berkala ke server eksternal agar website dapat dipulihkan seketika jika terjadi hal darurat."
       }
     ]
   },
   {
-    "slug": "crafting-exceptional-user-interfaces",
-    "title": "Crafting Exceptional User Interfaces",
-    "author": "Anastasia Solovyova",
-    "category": "UI Design",
-    "readTime": 6,
-    "date": "Nov 3, 2023",
-    "avatar": "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
-    "image": "/images/GEAbPaLGvmC6oHqfJUtgkOIs4lA.jpg",
-    "excerpt": "Task management isn't just about keeping track of everything on your plate; it's about knowing what to tackle first.",
-    "body": [
+    slug: "pentingnya-maintenance-website-rutin",
+    title: "Pentingnya Pemeliharaan (Maintenance) Rutin agar Website Bisnis Selalu Prima",
+    author: "Konsultan Web LiniWeb",
+    category: "Keamanan & Maintenance",
+    readTime: 4,
+    date: "24 Sep 2026",
+    avatar: "/images/cfae5rVbOPJ9IKMr5XZltSR4.png",
+    image: "/images/articles/article-11.jpg",
+    excerpt: "Website yang sukses membutuhkan perawatan rutin agar tetap aman, cepat, dan selalu menyajikan informasi terkini bagi pelanggan.",
+    body: [
       {
-        "tag": "p",
-        "html": "In the ever-evolving world of UI design, excellence isn't just a goal; it's a necessity. Crafting user interfaces that not only look stunning but also provide seamless and delightful experiences is a top priority for designers. This blog post delves into the world of UI design excellence and provides insights to help you elevate your design game."
+        tag: "p",
+        html: "Membuat website bukanlah proses satu kali selesai. Tanpa perawatan rutin, website rentan mengalami penurunan performa, broken links, hingga gangguan keamanan yang merugikan bisnis."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Apa Saja yang Dilakukan Saat Maintenance?"
       },
       {
-        "tag": "h3",
-        "html": "Understanding UI Design Excellence"
+        tag: "p",
+        html: "Pemeliharaan mencakup audit performa kecepatan, pembaruan keamanan, verifikasi fungsi formulir kontak dan integrasi WhatsApp, pembersihan database dari data sampah, serta pengecekan tautan yang rusak."
       },
       {
-        "tag": "p",
-        "html": "UI design excellence is about creating interfaces that users can effortlessly navigate while enjoying a visually pleasing experience. It's the art of striking the perfect balance between aesthetics and functionality. "
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "Here's how you can achieve it:"
+        tag: "h3",
+        html: "Menjaga Kesiapan Website Sepanjang Waktu"
       },
       {
-        "tag": "ol",
-        "html": "<li data-preset-tag=\"p\"><p><strong>User-Centered Approach:</strong> Start by understanding your users. Who are they? What are their needs and preferences? Design with their goals in mind.</p></li><li data-preset-tag=\"p\"><p><strong>Clarity and Simplicity:</strong> Keep your interfaces clean and simple. Cluttered designs overwhelm users. Prioritize clarity and make sure elements are intuitive.</p></li><li data-preset-tag=\"p\"><p><strong>Consistency:</strong> Maintain consistency in your design elements, such as buttons, fonts, colors, and layouts. Consistency breeds familiarity.</p></li><li data-preset-tag=\"p\"><p><strong>Mobile Responsiveness:</strong> In a mobile-driven world, your designs must be responsive. Ensure your interfaces adapt seamlessly to various screen sizes.</p></li><li data-preset-tag=\"p\"><p><strong>Typography Matters:</strong> Typography can make or break a design. Pay attention to fonts, spacing, and legibility.</p></li><li data-preset-tag=\"p\"><p><strong>Color Psychology:</strong> Understand the psychology of colors. Different colors evoke different emotions. Use them strategically to reinforce your design's message.</p></li><li data-preset-tag=\"p\"><p><strong>Effective Use of White Space:</strong> White space (or negative space) is crucial. It provides visual breathing room and makes your design less crowded.</p></li><li data-preset-tag=\"p\"><p><strong>Efficient Navigation:</strong> Navigation should be straightforward. Users should find what they're looking for without confusion.</p></li>"
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "Tools for Excellence"
-      },
-      {
-        "tag": "p",
-        "html": "To achieve UI design excellence, you'll need the right tools:"
-      },
-      {
-        "tag": "ul",
-        "html": "<li data-preset-tag=\"p\"><p><strong>Sketch:</strong> A popular tool for macOS, Sketch is excellent for vector-based UI design.</p></li><li data-preset-tag=\"p\"><p><strong>Figma:</strong> Known for its real-time collaboration features, Figma is a versatile choice for UI design.</p></li><li data-preset-tag=\"p\"><p><strong>Adobe XD:</strong> Part of Adobe's Creative Cloud suite, XD offers a comprehensive set of design and prototyping tools.</p></li><li data-preset-tag=\"p\"><p><strong>InVision:</strong> InVision is great for creating interactive and animated prototypes.</p></li>"
-      },
-      {
-        "tag": "p",
-        "html": "<br>"
-      },
-      {
-        "tag": "h3",
-        "html": "The Human Factor"
-      },
-      {
-        "tag": "p",
-        "html": "Remember, UI design excellence isn't just about aesthetics and functionality. It's about creating an emotional connection with users. Exceptional UI design can make users feel more positive about their interactions, and it encourages them to stay engaged."
-      },
-      {
-        "tag": "p",
-        "html": "In a world where design can make or break a user's experience, aspiring to UI design excellence is essential. By focusing on user-centered design, simplicity, consistency, and the right tools, you can craft interfaces that users not only appreciate but also enjoy interacting with. It's the path to UI design greatness."
+        tag: "p",
+        html: "Dengan perawatan teratur, Anda dapat mendeteksi potensi masalah teknis sebelum berdampak pada pelanggan. Website Anda akan selalu siap menerima calon klien setiap saat tanpa rasa cemas."
       }
     ]
   },
   {
-    "slug": "mastering-mobile-ui-design-best-practices-for-a-seamless-experience",
-    "title": "Mastering Mobile UI Design: Best Practices for a Seamless Experience",
-    "author": "David Johnson",
-    "category": "UI Design",
-    "readTime": 8,
-    "date": "Sep 23, 2023",
-    "avatar": "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
-    "image": "/images/6RUmSize6gWxKuNHFjc2Kg9Vkos.jpg",
-    "excerpt": "Discover how Taskify fosters seamless team collaboration, boosting productivity and improving communication.",
-    "body": [
+    slug: "tips-landing-page-konversi-tinggi",
+    title: "Rahasia Merancang Landing Page Berkonversi Tinggi yang Efektif Mengubah Pengunjung Menjadi Pembeli",
+    author: "Spesialis UI/UX LiniWeb",
+    category: "Web Design",
+    readTime: 5,
+    date: "20 Sep 2026",
+    avatar: "/images/t5uzwsiwsFXTYFR0OZYCfVZEw.png",
+    image: "/images/articles/article-12.jpg",
+    excerpt: "Pelajari formula struktur landing page yang terbukti memikat perhatian pengunjung dan mendorong mereka mengambil tindakan pembelian.",
+    body: [
       {
-        "tag": "p",
-        "html": "In the world of mobile apps, the user interface (UI) is a critical aspect that can make or break the success of your application. With the increasing use of smartphones, ensuring a seamless and engaging user experience is more important than ever."
+        tag: "p",
+        html: "Landing page adalah ujung tombak kampanye pemasaran digital Anda. Landing page yang efektif tidak sekadar terlihat cantik, melainkan memiliki alur psikologis yang meyakinkan calon pelanggan secara bertahap."
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Headline yang Kuat dan Penawaran Nilai Jelas"
       },
       {
-        "tag": "p",
-        "html": "Here are some best practices to master mobile UI design:"
+        tag: "p",
+        html: "Dalam 5 detik pertama, pengunjung harus memahami apa yang Anda tawarkan dan bagaimana produk atau jasa Anda dapat menyelesaikan masalah mereka. Gunakan headline yang spesifik dan langsung menyentuh kebutuhan utama pelanggan."
       },
       {
-        "tag": "ol",
-        "html": "<li data-preset-tag=\"p\"><p><strong>Simplify Navigation:</strong> Mobile screens are limited in space. Keep navigation simple and intuitive. Use clear icons and labels to guide users through the app effortlessly.</p></li><li data-preset-tag=\"p\"><p><strong>Optimize for Touch:</strong> Design elements with touch interaction in mind. Buttons should be large enough to tap comfortably, and there should be enough spacing between interactive elements to prevent accidental taps.</p></li><li data-preset-tag=\"p\"><p><strong>Prioritize Performance:</strong> Mobile users expect speedy apps. Optimize images and reduce unnecessary animations to ensure your app runs smoothly.</p></li><li data-preset-tag=\"p\"><p><strong>Consistent Design Language:</strong> Maintain a consistent design language throughout your app. Use the same fonts, colors, and icons to create a unified experience.</p></li><li data-preset-tag=\"p\"><p><strong>Adapt to Different Screens:</strong> With a variety of mobile devices available, ensure your app works well on various screen sizes and resolutions. Responsive design is key.</p></li><li data-preset-tag=\"p\"><p><strong>User Feedback:</strong> Incorporate user feedback to refine your app's UI. User testing and feedback can uncover issues you might have missed.</p></li><li data-preset-tag=\"p\"><p><strong>Keep It Simple:</strong> Avoid clutter and complexity. A clean and uncluttered interface is more appealing and easier to use.</p></li>"
+        tag: "p",
+        html: "<br>"
       },
       {
-        "tag": "p",
-        "html": "<br>"
+        tag: "h3",
+        html: "Bukti Sosial dan Tombol Aksi yang Menghipnotis"
       },
       {
-        "tag": "p",
-        "html": "By implementing these best practices, you can create a mobile UI design that not only looks great but also provides a seamless and enjoyable user experience. Your users will thank you for it."
+        tag: "p",
+        html: "Sertakan testimoni klien, logo partner, atau statistik pencapaian untuk membangun rasa percaya. Tempatkan tombol Call-to-Action (CTA) yang mencolok dengan teks ajakan yang jelas, seperti 'Konsultasi Sekarang' atau 'Dapatkan Penawaran Gratis'."
       }
     ]
   }

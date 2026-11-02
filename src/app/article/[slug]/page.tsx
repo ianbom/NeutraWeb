@@ -11,13 +11,6 @@ import { RichText } from "@/components/shared/rich-text";
 import { ArrowLeft, Calendar, Lightning, Tag as TagIcon } from "@/components/icons";
 import { articles, getArticle } from "@/data/articles";
 
-const LATEST = [
-  "the-ux-revolution-shaping-digital-experiences",
-  "mastering-ui-design-trends-a-deep-dive",
-  "the-power-of-responsive-web-design",
-  "crafting-exceptional-user-experiences",
-];
-
 export const instant = false;
 
 export function generateStaticParams() {
@@ -28,7 +21,7 @@ export async function generateMetadata({ params }: PageProps<"/article/[slug]">)
   const { slug } = await params;
   const article = getArticle(slug);
   return {
-    title: `${article?.title ?? "Article"} - Neutra - Innovate Develop Succeed`,
+    title: `${article?.title ?? "Artikel"} - LiniWeb - Pembuatan Website Profesional`,
     description: article?.excerpt,
   };
 }
@@ -37,14 +30,12 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) notFound();
-  // Reference CMS query: these four in order, minus the current post, first three.
-  const latest = LATEST.filter((s) => s !== slug)
-    .slice(0, 3)
-    .map((s) => getArticle(s)!);
+
+  const latest = articles.filter((a) => a.slug !== slug).slice(0, 3);
 
   const meta = [
     { Icon: TagIcon, text: article.category },
-    { Icon: Lightning, text: `${article.readTime} min read` },
+    { Icon: Lightning, text: `${article.readTime} menit baca` },
     { Icon: Calendar, text: article.date },
   ];
 
@@ -58,7 +49,7 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
               className="group inline-flex w-fit items-center gap-2 text-ink"
             >
               <ArrowLeft className="size-4" />
-              <RollLabel>All article</RollLabel>
+              <RollLabel>Semua Artikel</RollLabel>
             </Link>
 
             <div className="flex flex-col gap-8">
@@ -105,8 +96,8 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
         <section className="w-full overflow-clip">
           <Container className="section-y flex flex-col items-center max-md:!gap-8">
             <SectionHeader
-              title="Latest Articles"
-              description="Stay informed with the latest guides and news."
+              title="Artikel Terbaru"
+              description="Pelajari panduan dan tips terbaik seputar website untuk bisnis Anda."
             />
             <div className="grid w-full grid-cols-1 gap-4 md:auto-rows-fr md:grid-cols-2 md:gap-6 lg:grid-cols-3 md:max-lg:[&>*:nth-child(3)]:hidden">
               {latest.map((a, i) => (

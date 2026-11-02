@@ -11,7 +11,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "Welcome to Codify (\"we,\" \"our,\" or \"us\"). At Neutra, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your personal data when you use our website, products, or services. By accessing or using our services, you consent to the practices described in this Privacy Policy."
+        "html": "Welcome to LiniWeb (\"we,\" \"our,\" or \"us\"). At LiniWeb, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your personal data when you use our website, products, or services. By accessing or using our services, you consent to the practices described in this Privacy Policy."
       },
       {
         "tag": "p",
@@ -105,7 +105,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "This Software Licensing Agreement (\"Agreement\") is entered into between [Your Company Name], hereinafter referred to as the \"Licensor,\" and the individual or entity that accepts the terms of this Agreement, hereinafter referred to as the \"Licensee.\""
+        "html": "This Software Licensing Agreement (\"Agreement\") is entered into between LiniWeb, hereinafter referred to as the \"Licensor,\" and the individual or entity that accepts the terms of this Agreement, hereinafter referred to as the \"Licensee.\""
       },
       {
         "tag": "p",
@@ -207,11 +207,11 @@ export const legal: Record<string, LegalDoc> = {
     "body": [
       {
         "tag": "p",
-        "html": "Please read these Terms of Use (\"Agreement\") carefully before using Neutra (\"us,\" \"we,\" or \"our\"). This Agreement sets forth the legally binding terms and conditions for your use of the Neutra website and any of its related services."
+        "html": "Please read these Terms of Use (\"Agreement\") carefully before using LiniWeb (\"us,\" \"we,\" or \"our\"). This Agreement sets forth the legally binding terms and conditions for your use of the LiniWeb website and any of its related services."
       },
       {
         "tag": "p",
-        "html": "By accessing or using Neutra in any manner, including, but not limited to, visiting or browsing Neutra or contributing content or other materials to Neutra, you agree to be bound by this Agreement."
+        "html": "By accessing or using LiniWeb in any manner, including, but not limited to, visiting or browsing LiniWeb or contributing content or other materials to LiniWeb, you agree to be bound by this Agreement."
       },
       {
         "tag": "p",
@@ -223,7 +223,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "Neutra and its original content, features, and functionality are owned by Neutra and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws."
+        "html": "LiniWeb and its original content, features, and functionality are owned by LiniWeb and are protected by applicable intellectual property and copyright laws."
       },
       {
         "tag": "p",
@@ -235,7 +235,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "We may terminate your access to Neutra, without cause or notice, which may result in the forfeiture and destruction of all information associated with your account. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
+        "html": "We may terminate your access to LiniWeb, without cause or notice, which may result in the forfeiture and destruction of all information associated with your account. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
       },
       {
         "tag": "p",
@@ -247,7 +247,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "Our website may contain links to third-party websites. These links are provided solely as a convenience to you. By linking to these websites, we do not create or have an affiliation with, or sponsor such third-party websites. The inclusion of links within our website does not constitute any endorsement, guarantee, warranty, or recommendation of such third-party websites. Codify has no control over the legal documents and privacy practices of third-party websites. As such, you access any such third-party websites at your own risk."
+        "html": "Our website may contain links to third-party websites. These links are provided solely as a convenience to you. By linking to these websites, we do not create or have an affiliation with, or sponsor such third-party websites. The inclusion of links within our website does not constitute any endorsement, guarantee, warranty, or recommendation of such third-party websites. LiniWeb has no control over the legal documents and privacy practices of third-party websites. As such, you access any such third-party websites at your own risk."
       },
       {
         "tag": "p",
@@ -259,7 +259,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "We reserve the right to modify this Agreement at any time. You should check this Agreement periodically for changes. By using Neutra after we post any changes to this Agreement, you agree to accept those changes, whether or not you have reviewed them."
+        "html": "We reserve the right to modify this Agreement at any time. You should check this Agreement periodically for changes. By using LiniWeb after we post any changes to this Agreement, you agree to accept those changes, whether or not you have reviewed them."
       },
       {
         "tag": "p",
@@ -271,7 +271,7 @@ export const legal: Record<string, LegalDoc> = {
       },
       {
         "tag": "p",
-        "html": "If you have any questions about this Agreement, please contact us at hello@neutra.com."
+        "html": "If you have any questions about this Agreement, please contact us via WhatsApp at +62 851-5199-4724 or through our contact page."
       }
     ]
   }

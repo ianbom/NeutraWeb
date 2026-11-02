@@ -6,18 +6,18 @@ import { GearSix, RocketLaunch, UsersThree } from "@/components/icons";
 const features = [
   {
     Icon: RocketLaunch,
-    title: "Project Display",
-    body: "Showcase portfolio projects with visually appealing and effective layouts to attract potential clients.",
+    title: "Tampilan Profesional",
+    body: "Desain website modern dan menarik yang memperkuat citra bisnis serta memberikan kesan pertama yang meyakinkan.",
   },
   {
     Icon: UsersThree,
-    title: "Client Feedback",
-    body: "Build credibility by displaying dynamic testimonials from satisfied clients on your site.",
+    title: "Nyaman untuk Pelanggan",
+    body: "Tampilan responsif dan mudah digunakan, sehingga pelanggan dapat mengakses website dengan nyaman melalui berbagai perangkat.",
   },
   {
     Icon: GearSix,
-    title: "Services Overview",
-    body: "Detailed, interactive listings to engage visitors and provide insights into your services.",
+    title: "Sesuai Kebutuhan Bisnis",
+    body: "Mulai dari company profile, landing page, hingga toko online, setiap website dirancang sesuai kebutuhan dan tujuan bisnis Anda.",
   },
 ];
 
@@ -27,8 +27,8 @@ export function Features() {
       <Container className="section-y flex flex-col">
         <SectionHeader
           reveal={false}
-          title="Uncover Our Distinct Features"
-          description="Website construction entails the creation and design of online platforms, encompassing layout, content, and user interaction."
+          title="Website yang Dirancang untuk Bisnis Anda"
+          description="Kami menghadirkan website yang membantu membangun kepercayaan pelanggan dan mendukung perkembangan bisnis."
         />
         <div className="flex flex-col gap-4 lg:flex-row">
           {features.map(({ Icon, title, body }, i) => (

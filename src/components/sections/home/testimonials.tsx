@@ -10,17 +10,17 @@ const reviews = [
   {
     avatar: "/images/CPGgYEBeFy4gDXe5dDzh1qjQG1w.png",
     avatarBg: "#d0dfe6",
-    quote: "Neutra transformed our website, we've never looked better!",
+    quote: "LiniWeb mentransformasi website kami, tampilannya kini jauh lebih profesional dan menarik!",
   },
   {
     avatar: "/images/XfjXHJ2H7SzzlzPr1bGFm1T9BpI.png",
     avatarBg: "#ebee58",
-    quote: "Incredible results! Our client engagement has doubled thanks to Neutra.",
+    quote: "Hasil yang luar biasa! Interaksi pelanggan kami meningkat dua kali lipat berkat LiniWeb.",
   },
   {
     avatar: "/images/qCpU7HJtiveCC9wTFuh7L4wc8YM.png",
     avatarBg: "#d4e2e8",
-    quote: "Neutra’s intuitive design made our digital overhaul a complete success.",
+    quote: "Desain intuitif dari LiniWeb membuat pembaruan digital bisnis kami berjalan sukses.",
   },
 ];
 
@@ -81,10 +81,10 @@ export function Testimonials() {
         <div className="overflow-hidden rounded-[24px] bg-white px-5 py-10 md:px-8 md:py-12">
           <Reveal className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between md:gap-12">
             <div>
-              <p className="mb-6 text-sm font-medium text-ink">[ TESTIMONIALS ]</p>
+              <p className="mb-6 text-sm font-medium text-ink">TESTIMONI</p>
               <h2 className="max-w-[600px] text-[36px] leading-[1.1] font-semibold tracking-[-0.04em] text-ink md:text-[56px] lg:text-[68px]">Worldwide customers</h2>
             </div>
-            <p className="max-w-[400px] text-base leading-7 text-body md:text-lg">Neutra empowers global teams with seamless integration and time-saving capabilities. Discover user success!</p>
+            <p className="max-w-[400px] text-base leading-7 text-body md:text-lg">LiniWeb membantu berbagai bisnis berkembang dengan solusi website yang modern, efisien, dan berdampak nyata. Lihat kepuasan klien kami!</p>
           </Reveal>
           <div ref={track} data-testid="testimonial-track" onScroll={updatePosition} onDragStart={(event) => event.preventDefault()} onPointerDown={(event) => {
             if (event.pointerType !== "mouse" || event.currentTarget.scrollWidth <= event.currentTarget.clientWidth) return;
@@ -102,7 +102,7 @@ export function Testimonials() {
                   </span>
                   <div>
                     <p className="text-lg font-semibold text-ink">David Johnson</p>
-                    <p className="text-sm text-body">Saas company</p>
+                    <p className="text-sm text-body">Perusahaan SaaS</p>
                   </div>
                 </div>
                 <blockquote className="text-xl leading-8 text-ink">{r.quote}</blockquote>

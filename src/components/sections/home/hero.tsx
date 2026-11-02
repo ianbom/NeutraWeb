@@ -60,11 +60,10 @@ export function Hero() {
           <div className="relative z-10 flex min-w-0 flex-col gap-10">
             <Reveal className="flex max-w-[1024px] flex-col gap-4">
               <h1 className="w-full text-[28px] leading-9 font-semibold text-white md:max-w-[480px] md:text-[48px] md:leading-[60px] lg:max-w-[640px] lg:text-[60px] lg:leading-[72px]">
-                Design for ambitious software companies
+                Website Profesional untuk Bisnis yang Ingin Berkembang
               </h1>
               <p className="w-full text-base leading-6 text-hero-sub md:max-w-[480px] md:text-lg md:leading-7 lg:max-w-[560px]">
-                At Neutra, we merge creativity and strategy to craft designs that both captivate and
-                elevate.
+                Tingkatkan kepercayaan pelanggan dan tampil lebih dan sesuai kebutuhan bisnis Anda. 
               </p>
             </Reveal>
             <a
@@ -72,7 +71,7 @@ export function Hero() {
               className="group relative inline-flex h-12 w-full items-center justify-center rounded-xl bg-white/20 py-3.5 pr-16 pl-5 backdrop-blur-[8px] md:w-fit md:justify-start"
             >
               <span className="text-white">
-                <RollLabel>Schedule a call</RollLabel>
+                <RollLabel>Konsultasi Sekarang</RollLabel>
               </span>
               <span className="absolute top-1 right-1 flex size-10 items-center justify-center rounded-lg bg-brand p-2.5">
                 <ArrowRight className="size-5 text-white" />

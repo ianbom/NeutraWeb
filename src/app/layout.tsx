@@ -9,14 +9,14 @@ const instrument = Instrument_Sans({ variable: "--font-instrument", subsets: ["l
 const script = Great_Vibes({ variable: "--font-script", subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Neutra - Innovate with Design",
+  title: "LiniWeb - Jasa Pembuatan Website Profesional",
   description:
-    "At Neutra, we merge creativity and strategy to craft designs that both captivate and elevate.",
+    "LiniWeb adalah software house di Surabaya yang berfokus pada jasa pembuatan website profesional, landing page, company profile, dan e-commerce.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${manrope.variable} ${instrument.variable} ${script.variable}`}>
+    <html lang="id" className={`${manrope.variable} ${instrument.variable} ${script.variable}`}>
       <body className="overflow-x-clip">
         <Header />
         {children}

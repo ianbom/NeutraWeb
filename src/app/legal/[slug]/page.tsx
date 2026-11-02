@@ -12,7 +12,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/legal/[slug]">) {
   const { slug } = await params;
-  return { title: `${legal[slug]?.title ?? "Legal"} - Neutra - Innovate Develop Succeed` };
+  return { title: `${legal[slug]?.title ?? "Legal"} - LiniWeb - Jasa Pembuatan Website` };
 }
 
 export default async function LegalPage({ params }: PageProps<"/legal/[slug]">) {

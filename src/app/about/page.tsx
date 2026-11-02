@@ -4,14 +4,13 @@ import { Container } from "@/components/shared/container";
 import { SectionHeader } from "@/components/shared/section-header";
 import { Faq } from "@/components/sections/faq";
 import { Footer } from "@/components/layout/footer";
-import { DribbbleLogo, GearSix, Lightning, LinkedinLogo, NeutraMark, RocketLaunch, TwitterLogo } from "@/components/icons";
-import { social } from "@/data/site";
+import { GearSix, Lightning, LiniWebMark, RocketLaunch } from "@/components/icons";
 import { team } from "@/data/team";
 
 export const metadata = {
-  title: "About - Neutra - Innovate Develop Succeed",
+  title: "Tentang Kami - LiniWeb",
   description:
-    "At Neutra, we merge creativity and strategy to craft designs that both captivate and elevate.",
+    "Di LiniWeb, kami memadukan desain modern dan teknologi untuk menciptakan website profesional, fungsional, dan memberikan dampak nyata bagi bisnis Anda.",
 };
 
 const values = [
@@ -20,22 +19,16 @@ const values = [
   { Icon: RocketLaunch, title: "Impact", description: "Creative work made to move ideas forward." },
 ];
 
-const socials = [
-  { href: social.x, label: "X", Icon: TwitterLogo },
-  { href: social.dribbble, label: "Dribbble", Icon: DribbbleLogo },
-  { href: social.linkedin, label: "LinkedIn", Icon: LinkedinLogo },
-];
-
 export default function AboutPage() {
   return (
     <>
       <main>
-        <section aria-label="About Neutra" className="w-full bg-white">
+        <section aria-label="About LiniWeb" className="w-full bg-white">
           <Container className="flex flex-col items-center pt-10 text-center md:pt-14 lg:pt-16">
-            <h1 className="font-serif text-[76px] leading-none tracking-[-0.06em] text-ink italic md:text-[112px] lg:text-[128px]">Neutra</h1>
+            <h1 className="font-serif text-[76px] leading-none tracking-[-0.06em] text-ink italic md:text-[112px] lg:text-[128px]">LiniWeb</h1>
             <div className="mt-7 flex max-w-[440px] flex-col gap-5 text-base leading-7 text-body">
-              <p>At Neutra, we merge <strong className="font-semibold text-ink">creativity and strategy</strong> to craft designs that both captivate and elevate.</p>
-              <p>We bring ideas to life through digital design, creating thoughtful experiences for ambitious businesses.</p>
+              <p>Di LiniWeb, kami memadukan desain modern dan teknologi untuk menciptakan website yang profesional, fungsional, dan nyaman digunakan.</p>
+              <p>Kami membantu bisnis membangun kehadiran digital yang lebih kuat melalui website yang dirancang untuk meningkatkan kepercayaan.</p>
             </div>
             <div className="mt-16 grid w-full max-w-[850px] gap-12 pb-16 md:mt-20 md:grid-cols-3 md:gap-8 md:pb-24">
               {values.map(({ Icon, title, description }) => (
@@ -49,10 +42,10 @@ export default function AboutPage() {
           </Container>
           <Container className="relative flex min-h-[300px] items-center justify-center overflow-hidden py-20 text-center md:min-h-[380px]">
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 text-ink/15">
-              <NeutraMark className="absolute top-[18%] left-[6%] size-7 rotate-[-18deg] md:left-[12%] md:size-10" />
-              <NeutraMark className="absolute bottom-[18%] left-[15%] size-5 rotate-[25deg] md:left-[25%] md:size-8" />
-              <NeutraMark className="absolute top-[24%] right-[7%] size-8 rotate-[20deg] md:right-[14%] md:size-11" />
-              <NeutraMark className="absolute right-[20%] bottom-[16%] size-5 rotate-[-20deg] md:right-[27%] md:size-8" />
+              <LiniWebMark className="absolute top-[18%] left-[6%] size-7 rotate-[-18deg] md:left-[12%] md:size-10" />
+              <LiniWebMark className="absolute bottom-[18%] left-[15%] size-5 rotate-[25deg] md:left-[25%] md:size-8" />
+              <LiniWebMark className="absolute top-[24%] right-[7%] size-8 rotate-[20deg] md:right-[14%] md:size-11" />
+              <LiniWebMark className="absolute right-[20%] bottom-[16%] size-5 rotate-[-20deg] md:right-[27%] md:size-8" />
             </div>
             <h2 className="relative max-w-[560px] text-[36px] leading-[1.1] font-semibold tracking-tight text-ink md:text-[52px]">Creative ideas, <span className="font-serif font-normal italic">lasting impact.</span></h2>
           </Container>
@@ -62,7 +55,7 @@ export default function AboutPage() {
         <section className="w-full overflow-clip">
           <Container className="section-y flex flex-col !gap-8 md:!gap-12">
             <SectionHeader
-              title="Meet the Minds Behind Neutra"
+              title="Meet the Minds Behind LiniWeb"
               description="Meet the roles behind our approach to digital design and development. Names and photos are placeholders."
             />
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -81,20 +74,6 @@ export default function AboutPage() {
                     <div className="flex min-w-0 flex-col gap-1">
                       <h3 className="text-lg leading-6 font-semibold text-ink">{m.name}</h3>
                       <p className="text-sm leading-5 text-muted">{m.role}</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      {socials.map(({ href, label, Icon }) => (
-                        <a
-                          key={label}
-                          href={href}
-                          target="_blank"
-                          rel="noopener"
-                          aria-label={`${m.name} on ${label}`}
-                          className="text-muted transition-colors hover:text-brand"
-                        >
-                          <Icon className="size-5" />
-                        </a>
-                      ))}
                     </div>
                   </div>
                 </Reveal>

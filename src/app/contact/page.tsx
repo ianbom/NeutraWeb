@@ -7,33 +7,33 @@ import type { ReactNode } from "react";
 import { Chats, MapPin, PhoneCall, RocketLaunch } from "@/components/icons";
 
 export const metadata = {
-  title: "Contact - Neutra - Innovate Develop Succeed",
+  title: "Kontak - LiniWeb - Jasa Pembuatan Website",
   description:
-    "Contact our sales and support teams for demos, onboarding assistance, or any product inquiries.",
+    "Hubungi kami untuk konsultasi pembuatan website, penawaran harga, dan diskusi kebutuhan proyek digital bisnis Anda.",
 };
 
 const cards: { Icon: typeof Chats; title: string; body: ReactNode; link: string; href?: string; gradient: string }[] = [
   {
     Icon: Chats,
     title: "Message us",
-    body: "Message us using our online chat system for quick and efficient support.",
-    link: "support@neutra.com",
-    href: "mailto:support@neutra.com",
+    body: "Diskusikan ruang lingkup dan langkah pembuatan website bersama kami melalui WhatsApp.",
+    link: "+62 851-5199-4724",
+    href: "https://wa.me/6285151994724?text=Halo%20LiniWeb%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20pembuatan%20website.",
     gradient: "bg-linear-to-br from-[#dbeafe] via-[#f0f7ff] to-[#e0e7ff]",
   },
   {
     Icon: PhoneCall,
     title: "Call us",
-    body: "Let's have a chat – there's nothing quite like talking to another person.",
-    link: "+1(438) 000-0000",
-    href: "tel:+14380000000",
+    body: "Konsultasikan langsung kebutuhan website, fitur yang ingin dikembangkan, dan penawaran biaya.",
+    link: "+62 851-5199-4724",
+    href: "tel:+6285151994724",
     gradient: "bg-linear-to-br from-[#ffedd5] via-[#fff7ed] to-[#ffe4d6]",
   },
   {
     Icon: MapPin,
     title: "Address",
-    body: <>We&apos;d be delighted to welcome you to our <span className="md:max-lg:hidden">Head </span>Office.</>,
-    link: "Montreal, Canada, 110 Notre-Dame St W",
+    body: "Software house berbasis di Surabaya yang berfokus pada jasa pembuatan website profesional.",
+    link: "Surabaya, Jawa Timur, Indonesia",
     href: undefined,
     gradient: "bg-linear-to-br from-[#ede9fe] via-[#f5f3ff] to-[#fae8ff]",
   },
@@ -45,12 +45,12 @@ export default function ContactPage() {
       <main className="flex w-full justify-center">
         <Container className="flex flex-col items-center gap-12 pt-12 pb-16 md:pb-20 lg:gap-16 lg:pt-16 lg:pb-24">
           <div className="flex w-full max-w-[720px] flex-col items-center gap-4 text-center">
-            <Eyebrow size="xs">NEUTRA CONTACT</Eyebrow>
+            <Eyebrow size="xs">HUBUNGI KAMI</Eyebrow>
             <h1 className="w-full text-[36px] leading-[44px] font-semibold text-ink md:text-[48px] md:leading-[56px] md:font-bold">
-              Get in touch with us today!
+              Konsultasikan Kebutuhan Website Anda
             </h1>
             <p className="w-full max-w-[560px] text-base leading-6 text-body md:text-lg md:leading-7">
-              Contact our sales and support teams for demos, onboarding assistance, or any product inquiries.
+              Ceritakan bisnis Anda, halaman yang dibutuhkan, dan fitur yang ingin dikembangkan bersama tim kami.
             </p>
           </div>
 
@@ -66,7 +66,13 @@ export default function ContactPage() {
                     </div>
                     <div className="h-px w-full bg-line" />
                     {href ? (
-                      <a href={href} className="text-sm leading-5 font-semibold text-ink">{link}</a>
+                      <a
+                        href={href}
+                        {...(href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}
+                        className="text-sm leading-5 font-semibold text-ink transition-colors hover:text-brand"
+                      >
+                        {link}
+                      </a>
                     ) : (
                       <p className="text-sm leading-5 font-semibold text-ink">{link}</p>
                     )}
@@ -82,15 +88,15 @@ export default function ContactPage() {
                     <RocketLaunch className="size-8 text-body" />
                     <div className="flex flex-col gap-3">
                       <h2 className="max-w-[480px] text-2xl leading-8 font-semibold text-ink">
-                        Feel free to send our friendly team a message
+                        Kirimkan pesan seputar kebutuhan website Anda
                       </h2>
                       <p className="text-sm leading-5 text-body">
-                        Message us using our online chat system for quick and efficient support.
+                        Ceritakan ide dan kebutuhan proyek Anda. Tim kami akan menghubungi Anda kembali untuk diskusi lebih lanjut.
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-6">
-                    {["Free 7-day trial", "No credit card required", "Cancel anytime"].map((t) => (
+                    {["Konsultasi Gratis", "Penawaran Transparan", "Solusi Tepat Bisnis"].map((t) => (
                       <p key={t} className="text-sm leading-5 font-semibold text-ink">{t}</p>
                     ))}
                   </div>

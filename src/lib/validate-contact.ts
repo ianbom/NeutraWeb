@@ -1,7 +1,7 @@
 export type ContactErrors = { name?: string; email?: string; location?: string };
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-export const locations = ["Amsterdam", "Barcelona"] as const;
+export const locations = ["Surabaya", "Jakarta", "Sidoarjo", "Gresik", "Lainnya"] as const;
 
 /** Client-side contact form rules. Returns an empty object when valid. */
 export function validateContact(v: { name: string; email: string; location: string }): ContactErrors {

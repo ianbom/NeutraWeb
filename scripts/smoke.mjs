@@ -15,7 +15,7 @@ await p.fill("input[name=email]", "bad@x");
 await p.click("form button[type=submit]");
 console.log("bad email ->", await p.locator("form span", { hasText: "Please" }).allTextContents());
 await p.fill("input[name=email]", "jane@framer.com");
-await p.selectOption("select[name=location]", "Barcelona");
+await p.selectOption("select[name=location]", "Surabaya");
 await p.click("form button[type=submit]");
 console.log("valid ->", await p.locator("form [aria-live]").textContent(), "| input retained:", (await p.inputValue("input[name=name]")) === "Jane");
 
@@ -25,10 +25,11 @@ for (const [l, path] of [["About", "/about"], ["Cases", "/cases"], ["Article", "
   console.log("nav", l, "->", new URL(p.url()).pathname);
 }
 await p.goto(base + "/article", { waitUntil: "networkidle" });
-await p.locator('a[href="/article/crafting-exceptional-user-experiences"]').first().click();
-await p.waitForURL("**/crafting-exceptional-user-experiences");
+const firstArticleLink = await p.locator('main a[href^="/article/"]').first().getAttribute("href");
+await p.locator('main a[href^="/article/"]').first().click();
+await p.waitForURL(`**${firstArticleLink}`);
 console.log("article card ->", new URL(p.url()).pathname);
-await p.locator("a", { hasText: "All article" }).first().click();
+await p.locator("a", { hasText: /Semua Artikel|All article/i }).first().click();
 await p.waitForURL("**/article");
 console.log("back link ->", new URL(p.url()).pathname);
 for (const r of ["/legal/privacy-policy", "/legal/licensing", "/legal/terms-of-use"]) {

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { nav } from "@/data/site";
-import { NeutraMark } from "@/components/icons";
+import { LiniWebMark } from "@/components/icons";
 import { RollLabel } from "@/components/shared/roll-label";
 
 /**
@@ -53,12 +53,12 @@ export function Header() {
       >
         <Link
           href="/"
-          aria-label="Neutra home"
+          aria-label="LiniWeb home"
           className={`flex shrink-0 items-center justify-center bg-ink text-white ${
             scrolled ? "size-12 rounded-xl p-3" : "size-9 rounded-lg p-2"
           }`}
         >
-          <NeutraMark className={scrolled ? "size-6" : "size-5"} />
+          <LiniWebMark className={scrolled ? "size-6" : "size-5"} />
         </Link>
 
         <div className={`flex items-center ${scrolled ? "gap-0" : "gap-4"}`}>
@@ -101,7 +101,7 @@ export function Header() {
 
           <div className={`flex items-center ${scrolled ? "ml-2 gap-6" : "gap-6 md:gap-4"}`}>
             <a
-              href="https://wa.me/6285151884724"
+              href="https://wa.me/6285151994724"
               target="_blank"
               rel="noopener"
               className={`group inline-flex items-center justify-center ${

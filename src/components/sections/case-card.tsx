@@ -25,15 +25,32 @@ export function CaseCard({ item }: { item: CaseItem }) {
             <span className="flex h-9 w-12 items-center justify-center rounded-full border border-white text-xl transition-colors group-hover:bg-white motion-reduce:transition-none">→</span>
           </span>
         </div>
-        <div className="relative aspect-[532/322.4] overflow-hidden rounded-[28px] border-[6px] border-white bg-white">
-          <Image
-            src={item.image}
-            alt={`${item.title} template preview`}
-            fill
-            sizes="(min-width: 1200px) 564px, (min-width: 810px) 46vw, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none"
-          />
-        </div>
+        {item.bg ? (
+          <div
+            className="relative aspect-[532/322.4] overflow-hidden rounded-[28px] border-[6px] border-white"
+            style={{ backgroundColor: item.bg }}
+          >
+            <div className="absolute inset-x-6 top-6 bottom-0 overflow-hidden rounded-t-xl shadow-[0_12px_30px_rgba(0,0,0,0.3)] md:inset-x-8 md:top-8 md:rounded-t-2xl">
+              <Image
+                src={item.image}
+                alt={`${item.title} template preview`}
+                fill
+                sizes="(min-width: 1200px) 564px, (min-width: 810px) 46vw, 100vw"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="relative aspect-[532/322.4] overflow-hidden rounded-[28px] border-[6px] border-white bg-white">
+            <Image
+              src={item.image}
+              alt={`${item.title} template preview`}
+              fill
+              sizes="(min-width: 1200px) 564px, (min-width: 810px) 46vw, 100vw"
+              className={`object-cover ${item.image.startsWith("/portfolio/") ? "object-top" : ""} transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none`}
+            />
+          </div>
+        )}
       </a>
     </article>
   );

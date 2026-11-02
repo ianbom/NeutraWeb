@@ -99,11 +99,26 @@ export function ContactForm() {
         type="submit"
         className="flex h-10 w-full items-center justify-center rounded-[10px] bg-ink text-sm leading-5 font-semibold text-white transition-colors hover:bg-body"
       >
-        Submit
+        Kirim Pesan
       </button>
-      {/* ponytail: local-only confirmation; wire to an API route when a backend exists. */}
+      {/* ponytail: local-only validation; wire to an API route when a backend exists. */}
       <p aria-live="polite" className="-mt-3 min-h-0 text-xs leading-[18px] text-body empty:hidden">
-        {sent ? "Form validated locally. No message was sent or saved." : ""}
+        {sent ? (
+          <span>
+            Pesan Anda telah divalidasi. Untuk respon cepat, silakan hubungi kami via{" "}
+            <a
+              href="https://wa.me/6285151994724?text=Halo%20LiniWeb%2C%20saya%20sudah%20mengisi%20form%20kontak%20dan%20ingin%20berkonsultasi."
+              target="_blank"
+              rel="noopener"
+              className="font-semibold text-ink underline hover:text-brand"
+            >
+              WhatsApp (+62 851-5199-4724)
+            </a>
+            .
+          </span>
+        ) : (
+          ""
+        )}
       </p>
     </form>
   );

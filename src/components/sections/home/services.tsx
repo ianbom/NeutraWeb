@@ -5,9 +5,6 @@ import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/shared/button";
 import { FigmaLogo, FramerLogo, Lightning } from "@/components/icons";
 
-const DESC =
-  "We develop beautiful design and user-friendly interfaces for websites and mobile applications.";
-
 function Logo({ children, ring, className = "" }: { children: ReactNode; ring: string; className?: string }) {
   return (
     <span
@@ -45,13 +42,13 @@ export function Services() {
       <Container className="section-y flex flex-col">
         <Reveal className="flex flex-col items-center gap-4 md:items-start lg:flex-row lg:items-end lg:gap-16">
           <div className="flex w-full flex-col items-start gap-3 lg:w-[668px]">
-            <Eyebrow icon={<Lightning className="size-4 text-[#212121]" />}>Our services</Eyebrow>
+            <Eyebrow icon={<Lightning className="size-4 text-[#212121]" />}>Layanan Kami</Eyebrow>
             <h2 className="w-full text-2xl leading-8 font-semibold text-ink md:text-[36px] md:leading-[44px]">
-              Professional Services That Showcase Our Expertise.
+              Solusi Website untuk Setiap Kebutuhan Bisnis
             </h2>
           </div>
           <p className="w-full max-w-[420px] text-center text-base leading-6 text-body md:text-left md:text-lg md:leading-7">
-            From creative design to technical solutions, our services define industry excellence.
+            Dari website company profile hingga toko online, kami menghadirkan solusi digital yang dirancang sesuai kebutuhan dan tujuan bisnis Anda.
           </p>
         </Reveal>
 
@@ -62,14 +59,17 @@ export function Services() {
               <div className="flex flex-col gap-5">
                 <figure className="relative h-[180px] w-full overflow-hidden rounded-lg">
                   <Image
-                    src="/images/gNE42N9R0qGc9OHBFrF4nlkU7Uc.jpg"
-                    alt=""
+                    src="/home/TerraSite%20Sustainable%20Website%20Builder%20Interface.png"
+                    alt="Website Company Profile"
                     fill
                     sizes="(min-width:1200px) 322px, 100vw"
                     className="object-cover"
                   />
                 </figure>
-                <CardText title="Website or web service development" body={DESC} />
+                <CardText
+                  title="Website Company Profile"
+                  body="Bangun citra bisnis yang lebih profesional dengan website modern, informatif, dan menarik untuk meningkatkan kepercayaan calon pelanggan."
+                />
               </div>
               <div className="relative h-12">
                 <Logo ring="bg-surface" className="-left-0.5">
@@ -93,8 +93,8 @@ export function Services() {
             <Reveal>
               <div className="flex flex-col gap-5 rounded-3xl bg-card-violet p-6">
                 <CardText
-                  title="Outstaffing of IT specialists and project teams"
-                  body="We select specialists and connect them to projects in 48 hours."
+                  title="Landing Page"
+                  body="Tampilkan produk atau layanan Anda melalui halaman yang menarik, terarah, dan dirancang untuk mendorong pengunjung menjadi pelanggan."
                 />
                 <div className="relative h-12">
                   {avatars.map(({ src, bg, pos }) => (
@@ -109,12 +109,15 @@ export function Services() {
             </Reveal>
             <Reveal>
               <div className="flex flex-col gap-5 rounded-3xl bg-card-sky px-6 pt-6 lg:h-[318px]">
-                <CardText title="Website or web service development" body={DESC} />
+                <CardText
+                  title="Toko Online"
+                  body="Kembangkan bisnis dan jangkau lebih banyak pelanggan dengan toko online yang praktis, modern, dan mudah digunakan."
+                />
                 {/* The reference collapses this image to 0px on tablet; mirrored. */}
                 <figure className="relative h-40 w-full overflow-hidden rounded-t-lg md:h-0 lg:h-[200px]">
                   <Image
-                    src="/images/Lk8bryD99CmBUZfyNXCaiSGNA.jpg"
-                    alt=""
+                    src="/home/Redline%20Studio%20E-Commerce%20Growth%20Landing%20Page.png"
+                    alt="Toko Online E-Commerce"
                     fill
                     sizes="(min-width:1200px) 322px, 100vw"
                     className="object-cover"
@@ -130,14 +133,17 @@ export function Services() {
               <div className="flex flex-col gap-5 rounded-3xl bg-surface p-6">
                 <figure className="relative h-[180px] w-full overflow-hidden rounded-lg">
                   <Image
-                    src="/images/AqfUcDzKyJ9nuBlLjaa550Rzo.png"
-                    alt=""
+                    src="/home/Blue%20Codify%20Agency%20UI%20Collage.png"
+                    alt="Desain Website & UI/UX"
                     fill
                     sizes="(min-width:1200px) 332px, 100vw"
                     className="object-cover"
                   />
                 </figure>
-                <CardText title="UX & UI Design" body={DESC} bodyClass="max-w-[267px]" />
+                <CardText
+                  title="Desain Website & UI/UX"
+                  body="Hadirkan pengalaman digital yang nyaman melalui desain website yang menarik, intuitif, dan responsif di berbagai perangkat."
+                />
                 <div className="relative h-12">
                   <Logo ring="bg-surface" className="-left-0.5">
                     <span className="flex size-11 items-center justify-center rounded-full bg-ink">
@@ -153,8 +159,8 @@ export function Services() {
             <Reveal>
               <div className="flex flex-col rounded-3xl bg-surface p-6">
                 <CardText
-                  title="Implementation of Bitrix24"
-                  body="To automate business processes and improve the work of the sales department."
+                  title="Website Custom"
+                  body="Wujudkan website dengan desain dan fitur khusus yang disesuaikan dengan kebutuhan, alur kerja, serta tujuan bisnis Anda."
                 />
               </div>
             </Reveal>

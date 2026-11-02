@@ -51,7 +51,7 @@ export function ArticleCard({
                 <span className="text-muted/60">•</span>
                 <span className="text-body font-medium">{article.date}</span>
               </div>
-              <span className="font-normal text-muted">± {article.readTime} minutes read</span>
+              <span className="font-normal text-muted">± {article.readTime} menit baca</span>
             </div>
           ) : (
             <div className="flex items-center gap-4">
