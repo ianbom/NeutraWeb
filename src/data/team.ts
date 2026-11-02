@@ -1,39 +1,9 @@
 export interface Member { name: string; role: string; image: string }
 
+// Placeholder names and stock photos; replace with actual team members before publishing.
 export const team: Member[] = [
-  {
-    "name": "Michael Lee",
-    "role": "Analyst",
-    "image": "/images/nFTyhTg9mtSiD0Oh51DGHixETM.jpg"
-  },
-  {
-    "name": "Chris Wilson",
-    "role": "Customer Support",
-    "image": "/images/3lxG5etcVf37NL3i2nIGARTTaI.jpg"
-  },
-  {
-    "name": "Emily Brown",
-    "role": "Designer",
-    "image": "/images/S9PyleA1z5ugBA2Z87N0r7h5VA.jpg"
-  },
-  {
-    "name": "Olena Kurcherenko",
-    "role": "Designer",
-    "image": "/images/rZmnnPdh2NfRFd8GwnJmVeCq5Ow.jpg"
-  },
-  {
-    "name": "Anastasia Solovyova",
-    "role": "Product Manager",
-    "image": "/images/7n35wdG8jtT2LMgYCpqeBkSo6s.jpg"
-  },
-  {
-    "name": "Sarah Smith",
-    "role": "Project Manager",
-    "image": "/images/DBL6ct1qK3lvpE5gdCOeBR2CZQ.jpg"
-  },
-  {
-    "name": "David Johnson",
-    "role": "Founder",
-    "image": "/images/HH8KrojyxZx6X20z1r13CSwiiWE.jpg"
-  }
+  { name: "Alex Morgan", role: "Software Engineer", image: "/images/team-stock-1/portrait.jpg" },
+  { name: "Nadia Putri", role: "QA Engineer", image: "/images/team-stock-2/portrait.jpg" },
+  { name: "Rina Pratama", role: "UI/UX Designer", image: "/images/team-stock-3/portrait.jpg" },
+  { name: "Dimas Arya", role: "Cloud Engineer", image: "/images/team-stock-4/portrait.jpg" },
 ];

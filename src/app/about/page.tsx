@@ -63,22 +63,22 @@ export default function AboutPage() {
           <Container className="section-y flex flex-col !gap-8 md:!gap-12">
             <SectionHeader
               title="Meet the Minds Behind Neutra"
-              description="Discover the talented individuals who bring Neutra to life, each dedicated to pushing the boundaries of digital design."
+              description="Meet the roles behind our approach to digital design and development. Names and photos are placeholders."
             />
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {team.map((m, i) => (
                 <Reveal key={m.name} delay={(i % 4) * 0.05}>
                   <div className="flex flex-col gap-4 pt-4">
                     <figure className="relative aspect-square w-full overflow-hidden rounded-[32px]">
                       <Image
                         src={m.image}
-                        alt={m.name}
+                        alt=""
                         fill
-                        sizes="(min-width:1200px) 276px, (min-width:810px) 244px, 45vw"
+                        sizes="(min-width:1200px) 276px, (min-width:810px) 23vw, 45vw"
                         className="object-cover"
                       />
                     </figure>
-                    <div className="flex w-[232px] flex-col gap-1">
+                    <div className="flex min-w-0 flex-col gap-1">
                       <h3 className="text-lg leading-6 font-semibold text-ink">{m.name}</h3>
                       <p className="text-sm leading-5 text-muted">{m.role}</p>
                     </div>
