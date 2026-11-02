@@ -1,43 +1,40 @@
 import Image from "next/image";
-import { Reveal } from "@/components/motion/reveal";
-import { Tag } from "@/components/shared/button";
-import { ArrowUpRight } from "@/components/icons";
 import type { CaseItem } from "@/data/cases";
 
-/**
- * Case card. Hover (measured): image scales ~1.1 inside its 8px-radius clip,
- * and the ↗ arrow fades in while sliding 8px right-to-place next to the title.
- */
-export function CaseCard({ item, delay = 0 }: { item: CaseItem; delay?: number }) {
+export function CaseCard({ item }: { item: CaseItem }) {
   return (
-    <Reveal delay={delay}>
+    <article className="min-w-0">
       <a
         href={item.href}
         target="_blank"
         rel="noopener"
-        className="group flex flex-col gap-5 rounded-3xl bg-surface p-4 md:gap-8"
+        aria-label={`View ${item.title} (opens in a new tab)`}
+        className="group block rounded-3xl outline-offset-4 focus-visible:outline-2 focus-visible:outline-ink"
       >
-        <div className="relative aspect-[532/322.4] w-full overflow-hidden rounded-lg">
+        <div className="mb-6 flex items-start justify-between gap-4">
+          <div className="min-w-0">
+            <h3 className="text-xl leading-7 font-semibold text-ink md:text-2xl">{item.title}</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {item.tags.map((tag, i) => (
+                <span key={`${tag}-${i}`} className="rounded-full bg-white px-4 py-2 text-xs font-medium text-body">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <span aria-hidden="true" className="flex shrink-0 items-center gap-3 pt-1 text-sm font-semibold text-ink md:text-base">
+            <span className="hidden md:inline">View</span>
+            <span className="flex h-9 w-12 items-center justify-center rounded-full border border-white text-xl transition-colors group-hover:bg-white motion-reduce:transition-none">→</span>
+          </span>
+        </div>
+        <div className="relative aspect-[532/322.4] overflow-hidden rounded-[28px] border-[6px] border-white bg-white">
           <Image
             src={item.image}
             alt={`${item.title} template preview`}
             fill
-            sizes="(min-width:1200px) 532px, (min-width:810px) 45vw, 100vw"
-            className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 motion-reduce:transition-none"
+            sizes="(min-width: 1200px) 564px, (min-width: 810px) 46vw, 100vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none"
           />
         </div>
-        <div className="flex flex-col gap-4 px-2 pb-2 md:px-4 md:pb-4">
-          <div className="relative flex items-center">
-            <h3 className="flex-1 text-2xl leading-8 font-semibold text-ink">{item.title}</h3>
-            <ArrowUpRight className="absolute right-0 size-8 -translate-x-2 text-ink opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:opacity-100" />
-          </div>
-          <div className="flex flex-wrap items-center gap-2.5">
-            {item.tags.map((t, i) => (
-              <Tag key={`${t}-${i}`}>{t}</Tag>
-            ))}
-          </div>
-        </div>
       </a>
-    </Reveal>
+    </article>
   );
 }

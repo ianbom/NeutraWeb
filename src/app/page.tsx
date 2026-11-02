@@ -19,16 +19,16 @@ export default function Home() {
         <Features />
         <Services />
         <Statement />
-        <section className="w-full overflow-clip bg-white">
+        <section aria-label="Building Digital Excellence with Neutra." className="w-full bg-surface">
           <Container className="section-y flex flex-col">
             <SectionHeader
               phone="sm"
               title="Building Digital Excellence with Neutra."
               description="Discover the innovative marketing strategies that set Neutra apart, driving success in the digital landscape."
             />
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-              {homeCases.map((c, i) => (
-                <CaseCard key={c.title} item={c} delay={(i % 2) * 0.06} />
+            <div className="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 md:gap-y-16">
+              {homeCases.slice(0, 4).map((c) => (
+                <CaseCard key={c.title} item={c} />
               ))}
             </div>
           </Container>

@@ -3,6 +3,7 @@ import { Appear, Float, Parallax } from "@/components/motion/float";
 import { Reveal } from "@/components/motion/reveal";
 import { RollLabel } from "@/components/shared/roll-label";
 import { ArrowRight } from "@/components/icons";
+import { HeroWaves } from "./hero-waves";
 
 const shape = (src: string) => ({ src, alt: "Created by Dmytri Ivanov" });
 const SHAPE_3 = shape("/images/Es0UNVEZFUO6pTmc3NI38eovew.png");
@@ -26,7 +27,8 @@ export function Hero() {
   return (
     <section className="w-full">
       <div className="w-full px-4 pt-12 pb-12 md:px-6 md:pt-6 md:pb-20 lg:pb-24">
-        <div className="relative flex min-h-[520px] items-center overflow-visible rounded-[32px] bg-[radial-gradient(ellipse_at_100%_100%,#ff6b00_0%,transparent_43%),radial-gradient(ellipse_at_68%_20%,#117dff_0%,transparent_38%),linear-gradient(120deg,#092d8f_0%,#0750cf_60%,#2451b4_100%)] px-8 pt-24 pb-8 md:min-h-[640px] md:px-16 md:py-24 lg:min-h-[720px]">
+        <div className="relative flex min-h-[520px] items-center overflow-visible rounded-[32px] bg-[radial-gradient(ellipse_80%_65%_at_100%_50%,#ff6b00_0%,transparent_80%),radial-gradient(ellipse_at_68%_20%,#117dff_0%,transparent_38%),linear-gradient(120deg,#092d8f_0%,#0750cf_60%,#2451b4_100%)] px-8 pt-24 pb-8 md:min-h-[640px] md:px-16 md:py-24 lg:min-h-[720px]">
+          <HeroWaves />
           {/* Shape 3 — scroll parallax at -0.2x scrollY */}
           <Parallax
             speed={-0.2}

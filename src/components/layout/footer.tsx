@@ -31,7 +31,7 @@ function Column({ title, links }: { title: string; links: { label: string; href:
 export function Footer() {
   return (
     <footer className="w-full bg-surface p-2">
-      <div className="mx-auto w-full max-w-[1152px] rounded-2xl bg-ink md:rounded-[32px]">
+      <div className="mx-auto w-full max-w-[1152px] rounded-2xl bg-[#03050b] bg-[radial-gradient(ellipse_65%_80%_at_90%_120%,rgba(165,62,0,0.6),transparent_70%),radial-gradient(ellipse_100%_100%_at_35%_125%,#073ba6,transparent_75%)] md:rounded-[32px]">
         <div className="flex flex-col gap-12 px-8 py-8 md:gap-16 md:px-8 md:pt-12 md:pb-8 lg:px-6 lg:pt-16 lg:pb-8">
           <div className="flex flex-col gap-12 md:flex-row md:justify-between md:gap-0">
             <Reveal className="flex max-w-[442px] flex-col gap-4">
