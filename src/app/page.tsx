@@ -14,12 +14,12 @@ import { homeCases } from "@/data/cases";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="home-theme">
         <Hero />
         <Features />
         <Services />
         <Statement />
-        <section className="w-full overflow-clip bg-white">
+        <section className="w-full overflow-clip bg-[#f8fbff]">
           <Container className="section-y flex flex-col">
             <SectionHeader
               phone="sm"

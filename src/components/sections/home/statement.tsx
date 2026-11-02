@@ -6,7 +6,7 @@ import { Parallax } from "@/components/motion/float";
 /** "Since 2010…": per-char blur reveal; two greyscale shapes drift at -0.03x / -0.05x scrollY. */
 export function Statement() {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full bg-[radial-gradient(ellipse_at_center,#dcebff_0%,#f2f7ff_70%)]">
       <Container className="relative py-24 md:py-20 lg:py-24">
         <h2 className="mx-auto max-w-[810px] text-center text-[36px] leading-[44px] font-semibold text-ink">
           <BlurText text="Since 2010, we have been creating projects that remain relevant today, tomorrow, and for decades to come" />

@@ -44,7 +44,7 @@ const copyWidth = logos.reduce((s, [, w]) => s + w + 64, 0);
 
 export function Testimonials() {
   return (
-    <section className="w-full overflow-clip bg-white">
+    <section className="w-full overflow-clip bg-[#f2f7ff]">
       <Container className="section-y flex flex-col">
         <SectionHeader
           eyebrow={<Eyebrow>Testimonials</Eyebrow>}

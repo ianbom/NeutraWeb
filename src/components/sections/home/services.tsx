@@ -45,7 +45,7 @@ export function Services() {
       <Container className="section-y flex flex-col">
         <Reveal className="flex flex-col items-center gap-4 md:items-start lg:flex-row lg:items-end lg:gap-16">
           <div className="flex w-full flex-col items-start gap-3 lg:w-[668px]">
-            <Eyebrow icon={<Lightning className="size-4 text-[#212121]" />}>Our services</Eyebrow>
+            <Eyebrow icon={<Lightning className="size-4 text-[#2456c6]" />}>Our services</Eyebrow>
             <h2 className="w-full text-2xl leading-8 font-semibold text-ink md:text-[36px] md:leading-[44px]">
               Professional Services That Showcase Our Expertise.
             </h2>

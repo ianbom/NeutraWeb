@@ -37,6 +37,24 @@
   }
 }
 
+/* Homepage palette stays inside main; shared components retain their other-route colors. */
+.home-theme {
+  --color-ink: #14213d;
+  --color-body: #536783;
+  --color-muted: #536e92;
+  --color-dim: #dcebff;
+  --color-line: #d6e4f7;
+  --color-surface: #eaf3ff;
+  --color-brand: #2456c6;
+  --color-brand-light: #dcebff;
+  --color-hero-sub: #eaf3ff;
+  --color-card-violet: #dcebff;
+  --color-card-sky: #eaf3ff;
+  --color-card-steel: #eaf3ff;
+  --color-card-lemon: #f2f7ff;
+  background: #f2f7ff;
+}
+
 /* Framer section rhythm: phone 64/48, tablet 80/48, desktop 96/64 */
 @utility section-y {
   padding-block: 64px;

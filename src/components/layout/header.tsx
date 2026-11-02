@@ -9,11 +9,8 @@ import { NeutraMark } from "@/components/icons";
 import { RollLabel } from "@/components/shared/roll-label";
 
 /**
- * Two states, measured on the reference:
- *  - top: transparent, logo pinned left (36px tile), links right, dark Call Us button.
- *  - scrolled past 85px: everything collapses into a centred floating pill —
- *    rgba(26,26,26,.5) + blur(5px), radius 16, 4px padding, 48px tiles, white
- *    labels, white Call Us button. ~0.7s spring-ish settle.
+ * Two states: a full-width navigation row at the top and a centred floating
+ * pill after scrolling. Both retain the reference geometry and transitions.
  */
 export function Header() {
   const pathname = usePathname();
@@ -47,14 +44,14 @@ export function Header() {
         transition={spring}
         className={`relative mx-auto flex items-center backdrop-blur-[5px] ${
           scrolled
-            ? "-mt-2.5 w-fit gap-0 rounded-2xl bg-ink/50 p-1 max-md:mt-0"
-            : "w-full justify-between rounded-xl bg-transparent"
+            ? "-mt-2.5 w-fit gap-0 rounded-2xl bg-[#eaf3ff]/90 p-1 shadow-[0_8px_24px_rgba(36,86,198,0.12)] max-md:mt-0"
+            : "w-full justify-between rounded-xl bg-[#f8fbff]/90"
         }`}
       >
         <Link
           href="/"
           aria-label="Neutra home"
-          className={`flex shrink-0 items-center justify-center bg-ink text-white ${
+          className={`flex shrink-0 items-center justify-center bg-[#2456c6] text-white ${
             scrolled ? "size-12 rounded-xl p-3" : "size-9 rounded-lg p-2"
           }`}
         >
@@ -64,7 +61,7 @@ export function Header() {
         <div className={`flex items-center ${scrolled ? "gap-0" : "gap-4"}`}>
           <div
             className={`hidden items-center md:flex ${
-              scrolled ? "ml-1 gap-1 rounded-xl bg-ink p-1" : "gap-1 rounded-xl"
+              scrolled ? "ml-1 gap-1 rounded-xl bg-[#f8fbff] p-1" : "gap-1 rounded-xl"
             }`}
           >
             {nav.map((item) => {
@@ -83,14 +80,12 @@ export function Header() {
                   <span
                     className={`absolute bottom-0 size-[3px] -translate-x-1/2 rounded-full transition-[left,opacity,filter] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       active
-                        ? `left-1/2 opacity-100 ${scrolled ? "bg-white" : "bg-ink"}`
-                        : `-left-2.5 opacity-0 blur-[3px] group-hover:left-1/2 group-hover:opacity-100 group-hover:blur-none ${
-                            scrolled ? "bg-line" : "bg-muted"
-                          }`
+                        ? "left-1/2 bg-[#2456c6] opacity-100"
+                        : "-left-2.5 bg-[#2456c6] opacity-0 blur-[3px] group-hover:left-1/2 group-hover:opacity-100 group-hover:blur-none"
                     }`}
                   />
                   <span
-                    className={`text-sm leading-5 font-medium ${scrolled ? "text-white" : "text-ink"}`}
+                    className={`text-sm leading-5 font-medium transition-colors group-hover:text-[#2456c6] ${active ? "text-[#2456c6]" : "text-[#14213d]"}`}
                   >
                     {item.label}
                   </span>
@@ -106,8 +101,8 @@ export function Header() {
               rel="noopener"
               className={`group inline-flex items-center justify-center ${
                 scrolled
-                  ? "h-12 rounded-xl bg-white px-5 text-ink"
-                  : "h-9 rounded-lg bg-ink px-4 text-white"
+                  ? "h-12 rounded-xl bg-[#2456c6] px-5 text-white hover:bg-[#1644af]"
+                  : "h-9 rounded-lg bg-[#2456c6] px-4 text-white hover:bg-[#1644af]"
               }`}
             >
               <RollLabel>Call Us</RollLabel>
@@ -121,12 +116,12 @@ export function Header() {
             >
               <span className="relative block size-5">
                 <span
-                  className={`absolute top-1/2 left-1/2 h-0.5 w-4 -translate-x-1/2 bg-ink transition-transform duration-300 ${
+                  className={`absolute top-1/2 left-1/2 h-0.5 w-4 -translate-x-1/2 bg-[#2456c6] transition-transform duration-300 ${
                     open ? "rotate-45" : "-translate-y-[5px]"
                   }`}
                 />
                 <span
-                  className={`absolute top-1/2 left-1/2 h-0.5 w-4 -translate-x-1/2 bg-ink transition-transform duration-300 ${
+                  className={`absolute top-1/2 left-1/2 h-0.5 w-4 -translate-x-1/2 bg-[#2456c6] transition-transform duration-300 ${
                     open ? "-rotate-45" : "translate-y-[5px]"
                   }`}
                 />
@@ -155,7 +150,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, transition: { duration: 0 } }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="absolute top-[68px] right-4 left-4 flex flex-col gap-1 rounded-xl bg-ink p-2 md:hidden"
+              className="absolute top-[68px] right-4 left-4 flex flex-col gap-1 rounded-xl bg-[#f8fbff] p-2 shadow-[0_8px_24px_rgba(36,86,198,0.16)] md:hidden"
             >
               {nav.map((item) => {
                 const active = isActive(item.href);
@@ -165,10 +160,10 @@ export function Header() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    className="relative flex h-10 items-center px-4 py-2.5 text-sm leading-5 font-medium text-white"
+                    className={`relative flex h-10 items-center px-4 py-2.5 text-sm leading-5 font-medium hover:text-[#2456c6] ${active ? "text-[#2456c6]" : "text-[#14213d]"}`}
                   >
                     {active ? (
-                      <span className="absolute left-[13px] size-[3px] rounded-full bg-white" />
+                      <span className="absolute left-[13px] size-[3px] rounded-full bg-[#2456c6]" />
                     ) : null}
                     {item.label}
                   </Link>

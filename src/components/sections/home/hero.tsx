@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section className="w-full">
       <Container className="pt-12 pb-12 md:pt-6 md:pb-20 lg:pb-24">
-        <div className="relative overflow-visible rounded-[32px] bg-ink px-8 pt-24 pb-8 md:px-16 md:pt-40 md:pb-16">
+        <div className="relative overflow-visible rounded-[32px] bg-[radial-gradient(ellipse_at_85%_25%,rgba(76,155,255,0.4),transparent_47%),linear-gradient(125deg,#1644af_0%,#2456c6_58%,#3172de_100%)] px-8 pt-24 pb-8 shadow-[0_18px_48px_rgba(36,86,198,0.16)] md:px-16 md:pt-40 md:pb-16">
           {/* Shape 3 — scroll parallax at -0.2x scrollY */}
           <Parallax
             speed={-0.2}
