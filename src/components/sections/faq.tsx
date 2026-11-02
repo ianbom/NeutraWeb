@@ -1,5 +1,6 @@
 import { Button } from "@/components/shared/button";
 import { faqs } from "@/data/site";
+import "./faq.css";
 
 export function Faq() {
   return (
@@ -16,7 +17,7 @@ export function Faq() {
         <div>
           <div className="border-t border-line">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border-b border-line">
+              <details key={faq.q} className="faq-item group border-b border-line">
                 <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-6 py-6 text-left text-lg font-semibold text-ink outline-offset-4 focus-visible:outline-2 focus-visible:outline-ink md:text-xl [&::-webkit-details-marker]:hidden">
                   {faq.q}
                   <span aria-hidden="true" className="relative flex size-9 shrink-0 items-center justify-center rounded-full border border-ink">

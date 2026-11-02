@@ -14,11 +14,13 @@ export function ArticleCard({
   featured = false,
   delay = 0,
   hrefBase = "/article/",
+  variant = "default",
 }: {
   article: Article;
   featured?: boolean;
   delay?: number;
   hrefBase?: string;
+  variant?: "default" | "rich";
 }) {
   return (
     <Reveal delay={delay}>
@@ -39,11 +41,24 @@ export function ArticleCard({
             className="object-cover"
           />
         </figure>
-        <div className="flex flex-col gap-5 px-2 pt-4">
-          <div className="flex items-center gap-4">
-            <p className="text-sm leading-5 text-body">{article.date}</p>
-            <Tag outlined={false}>{article.category}</Tag>
-          </div>
+        <div className="flex flex-col gap-4 px-2 pt-4">
+          {variant === "rich" ? (
+            <div className="flex items-center justify-between text-sm leading-5 text-muted">
+              <div className="flex items-center gap-2">
+                <span className="relative size-6 shrink-0 overflow-hidden rounded-full">
+                  <Image src={article.avatar} alt={article.author} fill sizes="24px" className="object-cover" />
+                </span>
+                <span className="text-muted/60">•</span>
+                <span className="text-body font-medium">{article.date}</span>
+              </div>
+              <span className="font-normal text-muted">± {article.readTime} minutes read</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-4">
+              <p className="text-sm leading-5 text-body">{article.date}</p>
+              <Tag outlined={false}>{article.category}</Tag>
+            </div>
+          )}
           <div className="flex flex-col gap-2">
             <h3 className="text-lg leading-6 font-semibold text-ink">{article.title}</h3>
             <p className="text-sm leading-5 text-body">{article.excerpt}</p>

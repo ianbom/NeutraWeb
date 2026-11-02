@@ -33,7 +33,7 @@ export function Features() {
         <div className="flex flex-col gap-4 lg:flex-row">
           {features.map(({ Icon, title, body }, i) => (
             <Reveal key={title} delay={i * 0.06} className="flex-1">
-              <div className="flex h-full flex-col gap-8 rounded-3xl bg-surface p-8">
+              <div className="flex h-full flex-col gap-8 rounded-3xl bg-linear-to-br from-[#dfeaff] via-[#f9f9fc] to-[#ffdfce] p-8">
                 <Icon className="size-12 text-muted" />
                 <div className="flex flex-col gap-3">
                   <h3 className="text-2xl leading-8 font-semibold text-ink">{title}</h3>

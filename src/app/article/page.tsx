@@ -22,7 +22,7 @@ export default function ArticlePage() {
             <div className="flex w-full flex-col gap-4 md:flex-row md:items-center md:gap-6">
               {featuredArticles.map((a, i) => (
                 <div key={a.slug} className="w-full flex-1">
-                  <ArticleCard article={a} featured delay={i * 0.06} />
+                  <ArticleCard article={a} featured variant="rich" delay={i * 0.06} />
                 </div>
               ))}
             </div>
@@ -43,7 +43,7 @@ export default function ArticlePage() {
             />
             <div className="grid w-full grid-cols-1 md:auto-rows-fr gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
               {newsArticles.map((a, i) => (
-                <ArticleCard key={a.slug} article={a} delay={(i % 3) * 0.05} />
+                <ArticleCard key={a.slug} article={a} variant="rich" delay={(i % 3) * 0.05} />
               ))}
             </div>
           </Container>

@@ -1,0 +1,17 @@
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-item::details-content {
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+    transition: height 300ms ease, opacity 300ms ease, content-visibility 300ms allow-discrete;
+  }
+
+  .faq-item[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
+}
