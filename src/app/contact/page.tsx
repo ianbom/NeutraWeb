@@ -12,10 +12,31 @@ export const metadata = {
     "Contact our sales and support teams for demos, onboarding assistance, or any product inquiries.",
 };
 
-const cards: { Icon: typeof Chats; title: string; body: ReactNode; link: string; href?: string }[] = [
-  { Icon: Chats, title: "Message us", body: "Message us using our online chat system for quick and efficient support.", link: "support@neutra.com", href: "mailto:support@neutra.com" },
-  { Icon: PhoneCall, title: "Call us", body: "Let's have a chat – there's nothing quite like talking to another person.", link: "+1(438) 000-0000", href: "tel:+14380000000" },
-  { Icon: MapPin, title: "Address", body: <>We&apos;d be delighted to welcome you to our <span className="md:max-lg:hidden">Head </span>Office.</>, link: "Montreal, Canada, 110 Notre-Dame St W", href: undefined },
+const cards: { Icon: typeof Chats; title: string; body: ReactNode; link: string; href?: string; gradient: string }[] = [
+  {
+    Icon: Chats,
+    title: "Message us",
+    body: "Message us using our online chat system for quick and efficient support.",
+    link: "support@neutra.com",
+    href: "mailto:support@neutra.com",
+    gradient: "bg-linear-to-br from-[#dbeafe] via-[#f0f7ff] to-[#e0e7ff]",
+  },
+  {
+    Icon: PhoneCall,
+    title: "Call us",
+    body: "Let's have a chat – there's nothing quite like talking to another person.",
+    link: "+1(438) 000-0000",
+    href: "tel:+14380000000",
+    gradient: "bg-linear-to-br from-[#ffedd5] via-[#fff7ed] to-[#ffe4d6]",
+  },
+  {
+    Icon: MapPin,
+    title: "Address",
+    body: <>We&apos;d be delighted to welcome you to our <span className="md:max-lg:hidden">Head </span>Office.</>,
+    link: "Montreal, Canada, 110 Notre-Dame St W",
+    href: undefined,
+    gradient: "bg-linear-to-br from-[#ede9fe] via-[#f5f3ff] to-[#fae8ff]",
+  },
 ];
 
 export default function ContactPage() {
@@ -35,9 +56,9 @@ export default function ContactPage() {
 
           <div className="flex w-full flex-col gap-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-              {cards.map(({ Icon, title, body, link, href }) => (
+              {cards.map(({ Icon, title, body, link, href, gradient }) => (
                 <div key={title} className="rounded-3xl bg-surface p-2">
-                  <div className="flex h-full flex-col gap-6 rounded-2xl bg-white p-6 shadow-[inset_0_0_0_1px_var(--color-line)]">
+                  <div className={`flex h-full flex-col gap-6 rounded-2xl p-6 shadow-[inset_0_0_0_1px_var(--color-line)] ${gradient}`}>
                     <Icon className="size-8 text-body" />
                     <div className="flex flex-col gap-2">
                       <h2 className="text-lg leading-6 font-semibold text-ink">{title}</h2>
