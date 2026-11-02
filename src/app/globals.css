@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-instrument: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-script), cursive;
+
+  --color-ink: #1a1a1a;
+  --color-body: #383838;
+  --color-muted: #8e8e8e;
+  --color-dim: #a7a7a7;
+  --color-line: #e6e6e6;
+  --color-surface: #f5f4f6;
+  --color-brand: #ff620a;
+  --color-brand-light: #ff8532;
+  --color-lime: #b1fc03;
+  --color-hero-sub: #e6e6e6;
+
+  --color-card-violet: #efedff;
+  --color-card-sky: #e1f5fe;
+  --color-card-steel: #ecf0f3;
+  --color-card-lemon: #f9fbe7;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+}
+
+/* Framer section rhythm: phone 64/48, tablet 80/48, desktop 96/64 */
+@utility section-y {
+  padding-block: 64px;
+  row-gap: 48px;
+}
+
+@layer utilities {
+  @media (width >= 810px) {
+    .section-y { padding-block: 80px; }
+  }
+  @media (width >= 1200px) {
+    .section-y { padding-block: 96px; row-gap: 64px; }
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee-shift)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; }
+}
