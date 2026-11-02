@@ -2,9 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const locations = ["Amsterdam", "Barcelona"];
-
-import { validateContact, type ContactErrors as Errors } from "@/lib/validate-contact";
+import { locations, validateContact, type ContactErrors as Errors } from "@/lib/validate-contact";
 
 /**
  * Frontend-only contact form. Field chrome matches the reference: 44px rows on
@@ -25,15 +23,12 @@ export function ContactForm() {
       location: String(data.get("location") ?? ""),
     });
     setErrors(next);
-    if (Object.keys(next).length === 0) {
-      setSent(true);
-      e.currentTarget.reset();
-    }
+    setSent(Object.keys(next).length === 0);
   }
 
   const field = (invalid?: boolean) =>
     `flex h-11 w-full items-center rounded-[10px] px-3 text-sm leading-5 text-ink transition-colors ${
-      invalid ? "bg-white ring-1 ring-[#d93025]" : "bg-surface focus-within:bg-white"
+      invalid ? "bg-white ring-1 ring-[#d93025] focus-within:ring-2" : "bg-surface focus-within:bg-white focus-within:ring-2 focus-within:ring-ink"
     }`;
 
   return (
@@ -47,10 +42,12 @@ export function ContactForm() {
               type="text"
               placeholder="Jane Smith"
               aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "name-error" : undefined}
+              required
               className="w-full bg-transparent outline-none placeholder:text-muted"
             />
           </span>
-          {errors.name ? <span className="text-xs leading-[18px] text-[#d93025]">{errors.name}</span> : null}
+          {errors.name ? <span id="name-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.name}</span> : null}
         </label>
 
         <label className="flex flex-col gap-2.5">
@@ -61,10 +58,12 @@ export function ContactForm() {
               type="email"
               placeholder="jane@framer.com"
               aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "email-error" : undefined}
+              required
               className="w-full bg-transparent outline-none placeholder:text-muted"
             />
           </span>
-          {errors.email ? <span className="text-xs leading-[18px] text-[#d93025]">{errors.email}</span> : null}
+          {errors.email ? <span id="email-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.email}</span> : null}
         </label>
 
         <label className="flex flex-col gap-2.5">
@@ -74,6 +73,7 @@ export function ContactForm() {
               name="location"
               defaultValue=""
               aria-invalid={!!errors.location}
+              aria-describedby={errors.location ? "location-error" : undefined}
               className="w-full appearance-none bg-transparent text-ink outline-none invalid:text-muted"
               required
             >
@@ -89,7 +89,7 @@ export function ContactForm() {
             </svg>
           </span>
           {errors.location ? (
-            <span className="text-xs leading-[18px] text-[#d93025]">{errors.location}</span>
+            <span id="location-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.location}</span>
           ) : null}
         </label>
 
@@ -103,7 +103,7 @@ export function ContactForm() {
       </button>
       {/* ponytail: local-only confirmation; wire to an API route when a backend exists. */}
       <p aria-live="polite" className="-mt-3 min-h-0 text-xs leading-[18px] text-body empty:hidden">
-        {sent ? "Thanks, your message has been noted. We’ll be in touch shortly." : ""}
+        {sent ? "Form validated locally. No message was sent or saved." : ""}
       </p>
     </form>
   );

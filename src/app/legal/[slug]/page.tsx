@@ -4,6 +4,8 @@ import { Footer } from "@/components/layout/footer";
 import { RichText } from "@/components/shared/rich-text";
 import { legal } from "@/data/legal";
 
+export const instant = false;
+
 export function generateStaticParams() {
   return Object.keys(legal).map((slug) => ({ slug }));
 }

@@ -26,7 +26,7 @@ export function PromoPopup() {
           href="https://nivora.framer.website/"
           target="_blank"
           rel="noopener"
-          className="absolute inset-0 flex items-end bg-black/75 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="absolute inset-0 flex items-end bg-black/75 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 motion-reduce:transition-none"
         >
           <span className="font-instrument text-base leading-6 font-medium tracking-[-0.32px] text-white">
             New release
@@ -37,7 +37,7 @@ export function PromoPopup() {
         type="button"
         aria-label="Dismiss promotion"
         onClick={() => setVisible(false)}
-        className="absolute top-0 right-0 flex size-8 items-center justify-center p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="absolute top-0 right-0 flex size-8 items-center justify-center p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 motion-reduce:transition-none"
       >
         <X className="size-4 text-white/50" />
       </button>

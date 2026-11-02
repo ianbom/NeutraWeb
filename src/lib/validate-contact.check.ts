@@ -10,4 +10,5 @@ assert.ok(validateContact({ ...ok, email: "jane@framer" }).email);
 assert.ok(validateContact({ ...ok, email: "ja ne@framer.com" }).email);
 assert.deepEqual(validateContact({ ...ok, email: "  jane@framer.com " }), {});
 assert.ok(validateContact({ ...ok, location: "" }).location);
+assert.ok(validateContact({ ...ok, location: "Elsewhere" }).location);
 console.log("validate-contact: ok");

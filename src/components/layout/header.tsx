@@ -4,16 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { nav, remixUrl } from "@/data/site";
+import { nav } from "@/data/site";
 import { NeutraMark } from "@/components/icons";
 import { RollLabel } from "@/components/shared/roll-label";
 
 /**
  * Two states, measured on the reference:
- *  - top: transparent, logo pinned left (36px tile), links right, dark Remix button.
+ *  - top: transparent, logo pinned left (36px tile), links right, dark Call Us button.
  *  - scrolled past 85px: everything collapses into a centred floating pill —
  *    rgba(26,26,26,.5) + blur(5px), radius 16, 4px padding, 48px tiles, white
- *    labels, white Remix button. ~0.7s spring-ish settle.
+ *    labels, white Call Us button. ~0.7s spring-ish settle.
  */
 export function Header() {
   const pathname = usePathname();
@@ -41,7 +41,7 @@ export function Header() {
     : ({ type: "spring", stiffness: 120, damping: 22 } as const);
 
   return (
-    <nav className="sticky top-0 z-50 mx-auto h-[68px] w-full max-w-[1200px] px-4 py-4 md:h-[84px] md:p-6">
+    <nav onKeyDown={(event) => { if (event.key === "Escape" && open) { setOpen(false); event.currentTarget.querySelector<HTMLButtonElement>('button[aria-expanded]')?.focus(); } }} className="sticky top-0 z-50 mx-auto h-[68px] w-full max-w-[1200px] px-4 py-4 md:h-[84px] md:p-6">
       <motion.div
         layout
         transition={spring}
@@ -101,7 +101,7 @@ export function Header() {
 
           <div className={`flex items-center ${scrolled ? "ml-2 gap-6" : "gap-6 md:gap-4"}`}>
             <a
-              href={remixUrl}
+              href="https://wa.me/6285151884724"
               target="_blank"
               rel="noopener"
               className={`group inline-flex items-center justify-center ${
@@ -110,7 +110,7 @@ export function Header() {
                   : "h-9 rounded-lg bg-ink px-4 text-white"
               }`}
             >
-              <RollLabel>Remix template</RollLabel>
+              <RollLabel>Call Us</RollLabel>
             </a>
             <button
               type="button"
@@ -163,6 +163,7 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
                     className="relative flex h-10 items-center px-4 py-2.5 text-sm leading-5 font-medium text-white"
                   >

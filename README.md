@@ -1,6 +1,6 @@
 # Neutra — Next.js recreation
 
-A pixel-matched frontend recreation of [neutra.framer.website](https://neutra.framer.website/)
+A frontend recreation of [neutra.framer.website](https://neutra.framer.website/)
 (the Neutra Framer template by Stylokit), built with Next.js 16, React 19, Tailwind CSS v4 and
 Motion for React.
 
@@ -17,19 +17,14 @@ npm run lint
 
 `public/images/` holds the **original assets downloaded from the reference site** (3D shapes,
 project screenshots, avatars, client wordmarks). They belong to Stylokit / Dmytri Ivanov and are
-here for local development only. The build also reproduces Framer-specific chrome on purpose:
-the "Remix template" button, the "Made in Framer" badge and the "New release" promo popup, all
-pointing at framer.com / stylokit.com.
-
-Before any public deployment, replace the images and remove or re-point that chrome
-(`src/components/layout/framer-badge.tsx`, `promo-popup.tsx`, `remixUrl` in `src/data/site.ts`).
+here for local development only. Verify reuse rights or replace the images before any public deployment.
 
 ## Structure
 
 ```
 src/app/            routes: /, /about, /cases, /article, /article/[slug], /contact, /legal/[slug]
 src/components/
-  layout/           header (incl. scrolled pill + mobile menu), footer, framer badge, promo popup
+  layout/           header (incl. scrolled pill + mobile menu), footer
   sections/         home/* section components, shared faq, case-card, article-card, contact-form
   motion/           reveal, parallax/float/appear, blur-text, marquee
   shared/           container, button + tag + eyebrow, section-header, rich-text, roll-label
@@ -52,7 +47,7 @@ scripts/            reference-inspection tooling (see below)
 ## Motion (values measured off the reference, not invented)
 
 - **Scroll reveal** — `opacity 0 → 1` with a 96px rise under `perspective(1200px)`, spring
-  `stiffness 90 / damping 20`, triggering ~100px before the element enters the viewport and
+  `stiffness 90 / damping 20`, triggering after the element enters the viewport and
   replaying on re-entry (`src/components/motion/reveal.tsx`).
 - **Statement heading** — per-character reveal from `opacity .001 / blur(10px) / y 10px`, 26ms
   stagger, plays once.
@@ -63,7 +58,7 @@ scripts/            reference-inspection tooling (see below)
   line; case images scale 1.1 with the ↗ icon sliding in; article cards shift padding 8/0 → 0/16;
   footer links go orange.
 - **Logo marquee** — ~70px/s, 64px gap, 5% edge fade.
-- `prefers-reduced-motion` drops transforms and the marquee everywhere.
+- `prefers-reduced-motion` reduces primary scroll animations and stops the marquee; some hover transitions remain.
 
 ## Reference-comparison tooling
 

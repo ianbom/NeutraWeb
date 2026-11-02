@@ -12,7 +12,6 @@ export const social = {
   linkedin: "https://www.linkedin.com/in/dmytri-design/",
 };
 
-export const remixUrl = "https://www.framer.com/marketplace/templates/neutra/";
 export const buyUrl = "https://stylokit.lemonsqueezy.com/buy/e842c934-9e86-4005-9608-8a025089e6a4";
 
 export const footerLinks = {

@@ -5,7 +5,7 @@ const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
 const errs = [];
 p.on("pageerror", (e) => errs.push(e.message));
 p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
-const base = "http://localhost:3100";
+const base = process.env.BASE_URL || "http://localhost:3100";
 
 await p.goto(base + "/contact", { waitUntil: "networkidle" });
 await p.click("form button[type=submit]");
@@ -17,7 +17,7 @@ console.log("bad email ->", await p.locator("form span", { hasText: "Please" }).
 await p.fill("input[name=email]", "jane@framer.com");
 await p.selectOption("select[name=location]", "Barcelona");
 await p.click("form button[type=submit]");
-console.log("valid ->", await p.locator("form [aria-live]").textContent(), "| reset:", (await p.inputValue("input[name=name]")) === "");
+console.log("valid ->", await p.locator("form [aria-live]").textContent(), "| input retained:", (await p.inputValue("input[name=name]")) === "Jane");
 
 for (const [l, path] of [["About", "/about"], ["Cases", "/cases"], ["Article", "/article"], ["Contact", "/contact"], ["Home", "/"]]) {
   await p.locator("nav a", { hasText: new RegExp(`^${l}$`) }).first().click();

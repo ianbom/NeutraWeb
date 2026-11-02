@@ -18,6 +18,8 @@ const LATEST = [
   "crafting-exceptional-user-experiences",
 ];
 
+export const instant = false;
+
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
