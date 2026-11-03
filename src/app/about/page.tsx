@@ -7,11 +7,13 @@ import { Footer } from "@/components/layout/footer";
 import { GearSix, Lightning, LiniWebMark, RocketLaunch } from "@/components/icons";
 import { team } from "@/data/team";
 
-export const metadata = {
-  title: "Tentang Kami - LiniWeb",
-  description:
-    "Di LiniWeb, kami memadukan desain modern dan teknologi untuk menciptakan website profesional, fungsional, dan memberikan dampak nyata bagi bisnis Anda.",
-};
+import { pageMetadata } from "@/data/site";
+
+export const metadata = pageMetadata(
+  "/about",
+  "Tentang LiniWeb | Mitra Pembuatan Website Bisnis",
+  "Kenali LiniWeb, software house berbasis di Surabaya yang memadukan desain modern dan teknologi untuk membangun website profesional bagi bisnis Anda.",
+);
 
 const values = [
   { Icon: Lightning, title: "Clarity", description: "Clear ideas for meaningful digital experiences." },

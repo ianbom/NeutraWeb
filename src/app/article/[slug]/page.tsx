@@ -10,6 +10,7 @@ import { RollLabel } from "@/components/shared/roll-label";
 import { RichText } from "@/components/shared/rich-text";
 import { ArrowLeft, Calendar, Lightning, Tag as TagIcon } from "@/components/icons";
 import { articles, getArticle } from "@/data/articles";
+import { pageMetadata, siteUrl } from "@/data/site";
 
 export const instant = false;
 
@@ -20,10 +21,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/article/[slug]">) {
   const { slug } = await params;
   const article = getArticle(slug);
-  return {
-    title: `${article?.title ?? "Artikel"} - LiniWeb - Pembuatan Website Profesional`,
-    description: article?.excerpt,
-  };
+  if (!article) notFound();
+  const metadata = pageMetadata(`/article/${article.slug}`, `${article.title} | LiniWeb`, article.excerpt, article.image);
+  return { ...metadata, openGraph: { ...metadata.openGraph, type: "article", authors: [article.author] } };
 }
 
 export default async function ArticleDetail({ params }: PageProps<"/article/[slug]">) {
@@ -31,6 +31,18 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
   const article = getArticle(slug);
   if (!article) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: new URL(article.image, siteUrl).href,
+    url: `${siteUrl}/article/${article.slug}`,
+    mainEntityOfPage: `${siteUrl}/article/${article.slug}`,
+    inLanguage: "id-ID",
+    author: { "@type": "Organization", name: article.author },
+    publisher: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "LiniWeb", url: siteUrl },
+  };
   const latest = articles.filter((a) => a.slug !== slug).slice(0, 3);
 
   const meta = [
@@ -41,6 +53,7 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main>
         <section className="flex w-full justify-center">
           <div className="flex w-full max-w-[810px] flex-col gap-6 px-4 pt-4 pb-16 md:gap-16 md:px-6 md:pt-6 md:pb-20 lg:pb-24">

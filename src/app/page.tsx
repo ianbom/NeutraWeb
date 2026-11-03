@@ -10,10 +10,29 @@ import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/shared/container";
 import { SectionHeader } from "@/components/shared/section-header";
 import { homeCases } from "@/data/cases";
+import { pageMetadata, siteUrl } from "@/data/site";
+
+export const metadata = pageMetadata(
+  "/",
+  "Jasa Pembuatan Website Profesional untuk Bisnis | LiniWeb",
+  "Jasa pembuatan website profesional: landing page mulai Rp1 juta, company profile, dan toko online. Diskusikan kebutuhan website bisnis Anda bersama LiniWeb.",
+);
+
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: "LiniWeb",
+  url: siteUrl,
+  email: "mail@liniweb.site",
+  telephone: "+6285151994724",
+  sameAs: ["https://www.instagram.com/liniweb.id/"],
+};
 
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }} />
       <main>
         <Hero />
         <Features />

@@ -18,8 +18,8 @@ export function BlurText({ text, className }: { text: string; className?: string
       whileInView="shown"
       viewport={{ once: true, margin: "0px 0px 0px 0px" }}
       className={className}
-      aria-label={text}
     >
+      <span className="sr-only">{text}</span>
       {words.map((word, w) => (
         <span key={w} className="inline-block whitespace-nowrap" aria-hidden>
           {[...word].map((char) => {

@@ -5,10 +5,13 @@ import { Container } from "@/components/shared/container";
 import { SectionHeader } from "@/components/shared/section-header";
 import { featuredArticles, newsArticles } from "@/data/articles";
 
-export const metadata = {
-  title: "Artikel - LiniWeb - Wawasan & Panduan Pembuatan Website",
-  description: "Temukan artikel, wawasan, dan panduan praktis seputar pembuatan website, strategi digital, dan pengembangan bisnis.",
-};
+import { pageMetadata } from "@/data/site";
+
+export const metadata = pageMetadata(
+  "/article",
+  "Artikel & Panduan Pembuatan Website Bisnis | LiniWeb",
+  "Pelajari panduan memilih jasa pembuatan website, biaya, desain, SEO, dan strategi digital untuk membantu mengembangkan website bisnis Anda.",
+);
 
 export default function ArticlePage() {
   return (

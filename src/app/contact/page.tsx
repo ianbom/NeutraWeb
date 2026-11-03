@@ -6,11 +6,13 @@ import { Eyebrow } from "@/components/shared/button";
 import type { ReactNode } from "react";
 import { Chats, MapPin, PhoneCall, RocketLaunch } from "@/components/icons";
 
-export const metadata = {
-  title: "Kontak - LiniWeb - Jasa Pembuatan Website",
-  description:
-    "Hubungi kami untuk konsultasi pembuatan website, penawaran harga, dan diskusi kebutuhan proyek digital bisnis Anda.",
-};
+import { pageMetadata } from "@/data/site";
+
+export const metadata = pageMetadata(
+  "/contact",
+  "Konsultasi & Penawaran Jasa Pembuatan Website | LiniWeb",
+  "Hubungi LiniWeb melalui WhatsApp atau email untuk konsultasi pembuatan website, rincian biaya, dan diskusi kebutuhan website bisnis Anda.",
+);
 
 const cards: { Icon: typeof Chats; title: string; body: ReactNode; link: string; href?: string; gradient: string }[] = [
   {

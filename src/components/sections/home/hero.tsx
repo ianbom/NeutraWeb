@@ -5,7 +5,7 @@ import { RollLabel } from "@/components/shared/roll-label";
 import { ArrowRight } from "@/components/icons";
 import { HeroWaves } from "./hero-waves";
 
-const shape = (src: string) => ({ src, alt: "Created by Dmytri Ivanov" });
+const shape = (src: string) => ({ src, alt: "" });
 const SHAPE_3 = shape("/images/Es0UNVEZFUO6pTmc3NI38eovew.png");
 const SHAPE_2 = shape("/images/Tq3lgO9Qy66CFuDaYW99KQ5xoLM.png");
 const SHAPE_1 = shape("/images/LFAxsa4CpX7e4qBI72ijOV2sHg.png");
@@ -63,7 +63,7 @@ export function Hero() {
                 Website Profesional untuk Bisnis yang Ingin Berkembang
               </h1>
               <p className="w-full text-base leading-6 text-hero-sub md:max-w-[480px] md:text-lg md:leading-7 lg:max-w-[560px]">
-                Tingkatkan kepercayaan pelanggan dan tampil lebih dan sesuai kebutuhan bisnis Anda. 
+                Bangun kepercayaan pelanggan melalui landing page, company profile, atau toko online yang dirancang sesuai kebutuhan bisnis Anda.
               </p>
             </Reveal>
             <a

@@ -4,11 +4,13 @@ import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/shared/container";
 import { cases } from "@/data/cases";
 
-export const metadata = {
-  title: "Portofolio - LiniWeb",
-  description:
-    "Jelajahi portofolio website karya LiniWeb: landing page, company profile, dan e-commerce modern dengan performa tinggi.",
-};
+import { pageMetadata } from "@/data/site";
+
+export const metadata = pageMetadata(
+  "/cases",
+  "Portofolio Website: Landing Page & Toko Online | LiniWeb",
+  "Jelajahi portofolio website LiniWeb, mulai dari landing page, company profile, hingga toko online. Temukan inspirasi desain untuk kebutuhan bisnis Anda.",
+);
 
 export default function CasesPage() {
   return (

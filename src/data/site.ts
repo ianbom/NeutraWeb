@@ -1,3 +1,25 @@
+import type { Metadata } from "next";
+
+export const siteUrl = "https://www.liniweb.site";
+
+export function pageMetadata(path: string, title: string, description: string, image = "/opengraph-image"): Metadata {
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      siteName: "LiniWeb",
+      locale: "id_ID",
+      url: path,
+      title,
+      description,
+      images: [{ url: image, alt: title }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+  };
+}
+
 export const nav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
