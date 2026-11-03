@@ -15,7 +15,7 @@ export const footerLinks = {
     { label: "Article", href: "/article" },
   ],
   contact: [
-    { label: "Instagram", href: "https://www.instagram.com/liniweb.site/" },
+    { label: "Instagram", href: "https://www.instagram.com/liniweb.id/" },
     { label: "WhatsApp", href: "https://wa.me/6285151994724" },
     { label: "Email", href: "mailto:mail@liniweb.site" },
   ],
