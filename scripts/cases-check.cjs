@@ -47,7 +47,12 @@ const projects = [
     assert.equal(await section.getByRole("button", { name: "Situs Web", exact: true }).count(), 0);
     assert.equal(await cards.locator("img").count(), 12);
     assert.equal(await cards.first().locator('a[href="https://vyren-ecom.vercel.app/"]').count(), 1);
-    for (const tag of new Set(projects.flatMap(([, tags]) => tags))) {
+    const excluded = ["Heavy Equipment", "Logistics", "Shipping", "Lifestyle"];
+    const categories = [...new Set(projects.flatMap(([, tags]) => tags))].filter((tag) => !excluded.includes(tag));
+    assert.equal(categories.length, 8);
+    assert.equal(await section.getByRole("group", { name: "Project categories" }).getByRole("button").count(), 9);
+    for (const tag of excluded) assert.equal(await section.getByRole("button", { name: tag, exact: true }).count(), 0);
+    for (const tag of categories) {
       const button = section.getByRole("button", { name: tag, exact: true });
       await button.click();
       assert.equal(await button.getAttribute("aria-pressed"), "true");

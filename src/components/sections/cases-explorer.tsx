@@ -7,7 +7,7 @@ import type { CaseItem } from "@/data/cases";
 export function CasesExplorer({ items }: { items: CaseItem[] }) {
   const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
-  const categories = [...new Set(items.flatMap((item) => item.tags))];
+  const categories = [...new Set(items.flatMap((item) => item.tags))].filter((tag) => !["Heavy Equipment", "Logistics", "Shipping", "Lifestyle"].includes(tag));
   const query = search.trim().toLowerCase();
   const filtered = items.filter((item) =>
     (category === "All" || item.tags.includes(category)) &&
