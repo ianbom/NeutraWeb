@@ -24,9 +24,9 @@ const cards: { Icon: typeof Chats; title: string; body: ReactNode; link: string;
   {
     Icon: PhoneCall,
     title: "Call us",
-    body: "Konsultasikan langsung kebutuhan website, fitur yang ingin dikembangkan, dan penawaran biaya.",
+    body: "Hubungi kami melalui WhatsApp untuk mendiskusikan kebutuhan website dan penawaran biaya.",
     link: "+62 851-5199-4724",
-    href: "tel:+6285151994724",
+    href: "https://wa.me/6285151994724",
     gradient: "bg-linear-to-br from-[#ffedd5] via-[#fff7ed] to-[#ffe4d6]",
   },
   {
@@ -57,7 +57,7 @@ export default function ContactPage() {
           <div className="flex w-full flex-col gap-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {cards.map(({ Icon, title, body, link, href, gradient }) => (
-                <div key={title} className="rounded-3xl bg-surface p-2">
+                <div key={title} className="relative rounded-3xl bg-surface p-2">
                   <div className={`flex h-full flex-col gap-6 rounded-2xl p-6 shadow-[inset_0_0_0_1px_var(--color-line)] ${gradient}`}>
                     <Icon className="size-8 text-body" />
                     <div className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                       <a
                         href={href}
                         {...(href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}
-                        className="text-sm leading-5 font-semibold text-ink transition-colors hover:text-brand"
+                        className="text-sm leading-5 font-semibold text-ink transition-colors after:absolute after:inset-0 after:rounded-3xl hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
                       >
                         {link}
                       </a>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                         Kirimkan pesan seputar kebutuhan website Anda
                       </h2>
                       <p className="text-sm leading-5 text-body">
-                        Ceritakan ide dan kebutuhan proyek Anda. Tim kami akan menghubungi Anda kembali untuk diskusi lebih lanjut.
+                        Ceritakan ide dan kebutuhan proyek Anda, lalu kirim pesan melalui WhatsApp.
                       </p>
                     </div>
                   </div>

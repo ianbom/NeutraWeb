@@ -1,15 +1,8 @@
-export type ContactErrors = { name?: string; email?: string; location?: string };
+export type ContactErrors = { name?: string; message?: string };
 
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-export const locations = ["Surabaya", "Jakarta", "Sidoarjo", "Gresik", "Lainnya"] as const;
-
-/** Client-side contact form rules. Returns an empty object when valid. */
-export function validateContact(v: { name: string; email: string; location: string }): ContactErrors {
-  const e: ContactErrors = {};
-  if (!v.name.trim()) e.name = "Please enter your name.";
-  const email = v.email.trim();
-  if (!email) e.email = "Please enter your email.";
-  else if (!EMAIL.test(email)) e.email = "Please enter a valid email.";
-  if (!locations.some((location) => location === v.location)) e.location = "Please choose a location.";
-  return e;
+export function validateContact(v: { name: string; message: string }): ContactErrors {
+  const errors: ContactErrors = {};
+  if (!v.name.trim()) errors.name = "Masukkan nama Anda.";
+  if (!v.message.trim()) errors.message = "Masukkan pesan Anda.";
+  return errors;
 }

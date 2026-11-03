@@ -39,12 +39,12 @@ export function Footer() {
             </Reveal>
             <div className="flex gap-8 md:w-[292px] md:justify-between lg:w-[442px]">
               <Column title="Company" links={footerLinks.company} />
-              <Column title="Legal" links={footerLinks.legal} />
+              <Column title="Kontak" links={footerLinks.contact} />
             </div>
           </div>
 
           <div className="flex flex-col gap-8 border-t border-body pt-[31px] md:flex-row md:items-start md:justify-between md:gap-0">
-            <p className="text-sm leading-5 text-muted">
+            <p className="text-sm leading-5 text-gray-300">
               © 2026 LiniWeb. Seluruh hak cipta dilindungi.
             </p>
           </div>

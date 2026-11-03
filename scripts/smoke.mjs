@@ -1,56 +1,40 @@
-// Functional smoke test against the local dev server (port 3100).
+// Run with BASE_URL=http://localhost:3100 node scripts/smoke.mjs
+import assert from "node:assert/strict";
 import { chromium } from "playwright";
-const b = await chromium.launch();
-const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
-const errs = [];
-p.on("pageerror", (e) => errs.push(e.message));
-p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
-const base = process.env.BASE_URL || "http://localhost:3100";
 
-await p.goto(base + "/contact", { waitUntil: "networkidle" });
-await p.click("form button[type=submit]");
-console.log("empty submit -> invalid fields:", await p.locator("form [aria-invalid=true]").count());
-await p.fill("input[name=name]", "Jane");
-await p.fill("input[name=email]", "bad@x");
-await p.click("form button[type=submit]");
-console.log("bad email ->", await p.locator("form span", { hasText: "Please" }).allTextContents());
-await p.fill("input[name=email]", "jane@framer.com");
-await p.selectOption("select[name=location]", "Surabaya");
-await p.click("form button[type=submit]");
-console.log("valid ->", await p.locator("form [aria-live]").textContent(), "| input retained:", (await p.inputValue("input[name=name]")) === "Jane");
-
-for (const [l, path] of [["About", "/about"], ["Cases", "/cases"], ["Article", "/article"], ["Contact", "/contact"], ["Home", "/"]]) {
-  await p.locator("nav a", { hasText: new RegExp(`^${l}$`) }).first().click();
-  await p.waitForURL(base + path);
-  console.log("nav", l, "->", new URL(p.url()).pathname);
+const browser = await chromium.launch();
+try {
+  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  const base = process.env.BASE_URL || "http://localhost:3100";
+  await page.goto(`${base}/contact`, { waitUntil: "networkidle" });
+  const footer = page.locator("footer");
+  assert.equal(await footer.getByRole("link", { name: "Instagram" }).getAttribute("href"), "https://www.instagram.com/liniweb.site/");
+  assert.equal(await footer.getByRole("link", { name: "WhatsApp" }).getAttribute("href"), "https://wa.me/6285151994724");
+  assert.equal(await footer.getByRole("link", { name: "Email" }).getAttribute("href"), "mailto:mail@liniweb.site");
+  for (const title of ["Message us", "Call us"]) {
+    const card = page.locator("main div.relative").filter({ has: page.getByRole("heading", { name: title, exact: true }) });
+    assert.match(await card.getByRole("link").getAttribute("href"), /^https:\/\/wa\.me\/6285151994724/);
+  }
+  const form = page.locator("form");
+  assert.equal(await form.locator('input[name="email"], select[name="location"]').count(), 0);
+  await form.getByRole("button", { name: "Kirim Pesan" }).click();
+  assert.equal(await form.locator('[aria-invalid="true"]').count(), 2);
+  await form.locator('[name="name"]').fill("  ");
+  await form.locator('[name="message"]').fill("  ");
+  await form.getByRole("button", { name: "Kirim Pesan" }).click();
+  assert.equal(await form.locator('[aria-invalid="true"]').count(), 2);
+  await form.locator('[name="name"]').fill("Éka & Co");
+  await form.locator('[name="message"]').fill("Website + toko\nTerima kasih!");
+  let target;
+  await page.route("https://wa.me/**", async (route) => { target = route.request().url(); await route.abort(); });
+  await form.getByRole("button", { name: "Kirim Pesan" }).click();
+  await page.waitForURL(/wa\.me|chrome-error/, { timeout: 5000 }).catch(() => {});
+  assert.ok(target, "WhatsApp navigation missing");
+  assert.equal(new URL(target).searchParams.get("text"), "Halo LiniWeb, saya Éka & Co.\n\nWebsite + toko\nTerima kasih!");
+  for (const slug of ["privacy-policy", "licensing", "terms-of-use"]) {
+    assert.equal((await page.goto(`${base}/legal/${slug}`)).status(), 404);
+  }
+  console.log("Contact and footer checks passed");
+} finally {
+  await browser.close();
 }
-await p.goto(base + "/article", { waitUntil: "networkidle" });
-const firstArticleLink = await p.locator('main a[href^="/article/"]').first().getAttribute("href");
-await p.locator('main a[href^="/article/"]').first().click();
-await p.waitForURL(`**${firstArticleLink}`);
-console.log("article card ->", new URL(p.url()).pathname);
-await p.locator("a", { hasText: /Semua Artikel|All article/i }).first().click();
-await p.waitForURL("**/article");
-console.log("back link ->", new URL(p.url()).pathname);
-for (const r of ["/legal/privacy-policy", "/legal/licensing", "/legal/terms-of-use"]) {
-  const res = await p.goto(base + r);
-  console.log(r, res.status());
-}
-console.log("404 /article/nope:", (await p.goto(base + "/article/nope")).status());
-console.log("404 /legal/nope:", (await p.goto(base + "/legal/nope")).status());
-
-// keyboard: tab reaches nav links with visible focus
-await p.goto(base + "/", { waitUntil: "networkidle" });
-await p.keyboard.press("Tab");
-await p.keyboard.press("Tab");
-console.log("2nd tab focus:", await p.evaluate(() => document.activeElement?.textContent?.trim()));
-
-// mobile menu closes on navigation
-await p.setViewportSize({ width: 390, height: 844 });
-await p.goto(base + "/", { waitUntil: "networkidle" });
-await p.click('nav button[aria-label="Open menu"]');
-await p.locator("nav a", { hasText: /^Cases$/ }).last().click();
-await p.waitForURL("**/cases");
-console.log("mobile menu after nav open?:", await p.locator('nav button[aria-expanded="true"]').count());
-console.log("errors:", errs.length ? errs.filter((e) => !e.includes("404")) : "none");
-await b.close();

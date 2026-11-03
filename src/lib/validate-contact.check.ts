@@ -2,13 +2,9 @@
 import assert from "node:assert/strict";
 import { validateContact } from "./validate-contact.ts";
 
-const ok = { name: "Jane", email: "jane@framer.com", location: "Amsterdam" };
+const ok = { name: "Jane", message: "Saya ingin website." };
 assert.deepEqual(validateContact(ok), {});
 assert.ok(validateContact({ ...ok, name: "   " }).name);
-assert.ok(validateContact({ ...ok, email: "" }).email);
-assert.ok(validateContact({ ...ok, email: "jane@framer" }).email);
-assert.ok(validateContact({ ...ok, email: "ja ne@framer.com" }).email);
-assert.deepEqual(validateContact({ ...ok, email: "  jane@framer.com " }), {});
-assert.ok(validateContact({ ...ok, location: "" }).location);
-assert.ok(validateContact({ ...ok, location: "Elsewhere" }).location);
+assert.ok(validateContact({ ...ok, message: "\n  " }).message);
+assert.deepEqual(validateContact({ name: " Éka ", message: "Halo & +\nTerima kasih" }), {});
 console.log("validate-contact: ok");

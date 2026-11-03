@@ -1,125 +1,46 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { validateContact, type ContactErrors } from "@/lib/validate-contact";
 
-import { locations, validateContact, type ContactErrors as Errors } from "@/lib/validate-contact";
-
-/**
- * Frontend-only contact form. Field chrome matches the reference: 44px rows on
- * #f5f4f6 with radius 10, white on focus, 14px ink text, dark 40px submit that
- * darkens to #383838 on hover. Validation and the success note are ours — the
- * reference posts to Framer's backend, which we do not have.
- */
 export function ContactForm() {
-  const [errors, setErrors] = useState<Errors>({});
-  const [sent, setSent] = useState(false);
+  const [errors, setErrors] = useState<ContactErrors>({});
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const next = validateContact({
-      name: String(data.get("name") ?? ""),
-      email: String(data.get("email") ?? ""),
-      location: String(data.get("location") ?? ""),
-    });
+    const name = String(data.get("name") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+    const next = validateContact({ name, message });
     setErrors(next);
-    setSent(Object.keys(next).length === 0);
+    if (Object.keys(next).length) return;
+    const text = `Halo LiniWeb, saya ${name}.\n\n${message}`;
+    window.location.assign(`https://wa.me/6285151994724?text=${encodeURIComponent(text)}`);
   }
 
   const field = (invalid?: boolean) =>
-    `flex h-11 w-full items-center rounded-[10px] px-3 text-sm leading-5 text-ink transition-colors ${
-      invalid ? "bg-white ring-1 ring-[#d93025] focus-within:ring-2" : "bg-surface focus-within:bg-white focus-within:ring-2 focus-within:ring-ink"
+    `w-full rounded-[10px] px-3 py-3 text-sm leading-5 text-ink outline-none transition-colors ${
+      invalid ? "bg-white ring-1 ring-[#d93025] focus:ring-2" : "bg-surface focus:bg-white focus:ring-2 focus:ring-ink"
     }`;
 
   return (
     <form noValidate onSubmit={onSubmit} className="flex w-full flex-col gap-6 md:min-w-0 md:flex-1 lg:w-[420px] lg:flex-none">
-      <div className="flex w-full flex-col gap-3">
-        <label className="flex flex-col gap-2.5">
-          <span className="text-xs leading-[18px] text-body">Name</span>
-          <span className={field(!!errors.name)}>
-            <input
-              name="name"
-              type="text"
-              placeholder="Jane Smith"
-              aria-invalid={!!errors.name}
-              aria-describedby={errors.name ? "name-error" : undefined}
-              required
-              className="w-full bg-transparent outline-none placeholder:text-muted"
-            />
-          </span>
-          {errors.name ? <span id="name-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.name}</span> : null}
-        </label>
-
-        <label className="flex flex-col gap-2.5">
-          <span className="text-xs leading-[18px] text-body">Email</span>
-          <span className={field(!!errors.email)}>
-            <input
-              name="email"
-              type="email"
-              placeholder="jane@framer.com"
-              aria-invalid={!!errors.email}
-              aria-describedby={errors.email ? "email-error" : undefined}
-              required
-              className="w-full bg-transparent outline-none placeholder:text-muted"
-            />
-          </span>
-          {errors.email ? <span id="email-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.email}</span> : null}
-        </label>
-
-        <label className="flex flex-col gap-2.5">
-          <span className="text-xs leading-[18px] text-body">Location</span>
-          <span className={`${field(!!errors.location)} pr-3`}>
-            <select
-              name="location"
-              defaultValue=""
-              aria-invalid={!!errors.location}
-              aria-describedby={errors.location ? "location-error" : undefined}
-              className="w-full appearance-none bg-transparent text-ink outline-none invalid:text-muted"
-              required
-            >
-              <option value="">Select…</option>
-              {locations.map((l) => (
-                <option key={l} value={l}>
-                  {l}
-                </option>
-              ))}
-            </select>
-            <svg viewBox="0 0 24 24" className="pointer-events-none size-4 shrink-0 text-ink" aria-hidden>
-              <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </span>
-          {errors.location ? (
-            <span id="location-error" role="alert" className="text-xs leading-[18px] text-[#d93025]">{errors.location}</span>
-          ) : null}
-        </label>
-
-
-      </div>
-      <button
-        type="submit"
-        className="flex h-10 w-full items-center justify-center rounded-[10px] bg-ink text-sm leading-5 font-semibold text-white transition-colors hover:bg-body"
-      >
+      <label className="flex flex-col gap-2.5">
+        <span className="text-xs leading-[18px] text-body">Nama</span>
+        <input name="name" type="text" placeholder="Nama Anda" required aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "name-error" : undefined} className={field(!!errors.name)} />
+        {errors.name && <span id="name-error" role="alert" className="text-xs text-[#d93025]">{errors.name}</span>}
+      </label>
+      <label className="flex flex-col gap-2.5">
+        <span className="text-xs leading-[18px] text-body">Pesan</span>
+        <textarea name="message" rows={4} placeholder="Ceritakan kebutuhan website Anda" required aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined} className={field(!!errors.message)} />
+        {errors.message && <span id="message-error" role="alert" className="text-xs text-[#d93025]">{errors.message}</span>}
+      </label>
+      <button type="submit" className="flex h-10 w-full items-center justify-center rounded-[10px] bg-ink text-sm leading-5 font-semibold text-white transition-colors hover:bg-body">
         Kirim Pesan
       </button>
-      {/* ponytail: local-only validation; wire to an API route when a backend exists. */}
-      <p aria-live="polite" className="-mt-3 min-h-0 text-xs leading-[18px] text-body empty:hidden">
-        {sent ? (
-          <span>
-            Pesan Anda telah divalidasi. Untuk respon cepat, silakan hubungi kami via{" "}
-            <a
-              href="https://wa.me/6285151994724?text=Halo%20LiniWeb%2C%20saya%20sudah%20mengisi%20form%20kontak%20dan%20ingin%20berkonsultasi."
-              target="_blank"
-              rel="noopener"
-              className="font-semibold text-ink underline hover:text-brand"
-            >
-              WhatsApp (+62 851-5199-4724)
-            </a>
-            .
-          </span>
-        ) : (
-          ""
-        )}
-      </p>
+      <p className="-mt-3 text-xs leading-[18px] text-body">WhatsApp akan terbuka dengan pesan Anda. Tekan kirim di WhatsApp untuk mengirimkannya.</p>
     </form>
   );
 }

@@ -14,10 +14,10 @@ export const footerLinks = {
     { label: "Cases", href: "/cases" },
     { label: "Article", href: "/article" },
   ],
-  legal: [
-    { label: "Privacy Policy", href: "/legal/privacy-policy" },
-    { label: "Licensing", href: "/legal/licensing" },
-    { label: "Terms of Use", href: "/legal/terms-of-use" },
+  contact: [
+    { label: "Instagram", href: "https://www.instagram.com/liniweb.site/" },
+    { label: "WhatsApp", href: "https://wa.me/6285151994724" },
+    { label: "Email", href: "mailto:mail@liniweb.site" },
   ],
 };
 
