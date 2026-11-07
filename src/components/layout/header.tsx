@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { LocalLink as Link } from "@/components/shared/local-link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { nav } from "@/data/site";
@@ -17,6 +17,7 @@ import { RollLabel } from "@/components/shared/roll-label";
  */
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState<string | null>(null);
   // Close the menu on navigation by keying it to the current path.
@@ -33,8 +34,10 @@ export function Header() {
   }, []);
 
 
+  const locale = pathname.startsWith("/en") ? "en" : "id";
+  const barePath = pathname.replace(/^\/(id|en)(?=\/|$)/, "") || "/";
   const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+    href === "/" ? barePath === "/" : barePath.startsWith(href);
 
   const spring = reduce
     ? { duration: 0 }
@@ -100,6 +103,7 @@ export function Header() {
           </div>
 
           <div className={`flex items-center ${scrolled ? "ml-2 gap-6" : "gap-6 md:gap-4"}`}>
+            <button type="button" aria-label={locale === "id" ? "Switch to English" : "Ganti ke bahasa Indonesia"} onClick={() => { router.push(`/${locale === "id" ? "en" : "id"}${barePath === "/" ? "" : barePath}${window.location.search}${window.location.hash}`); }} className={`rounded-lg px-2 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 ${scrolled ? "text-white" : "text-ink"}`}>{locale === "id" ? "EN" : "ID"}</button>
             <a
               href="https://wa.me/6285151994724"
               target="_blank"

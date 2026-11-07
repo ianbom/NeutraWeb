@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocalLink as Link } from "@/components/shared/local-link";
 import type { ReactNode } from "react";
 import { RollLabel } from "./roll-label";
 

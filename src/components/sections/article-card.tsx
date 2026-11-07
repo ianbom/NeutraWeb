@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocalLink as Link } from "@/components/shared/local-link";
 import { Reveal } from "@/components/motion/reveal";
 import { Tag } from "@/components/shared/button";
 import type { Article } from "@/data/articles";

@@ -1,3 +1,4 @@
+import { LocalLink } from "@/components/shared/local-link";
 import Image from "next/image";
 import { Appear, Float, Parallax } from "@/components/motion/float";
 import { Reveal } from "@/components/motion/reveal";
@@ -66,7 +67,7 @@ export function Hero() {
                 Bangun kepercayaan pelanggan melalui landing page, company profile, atau toko online yang dirancang sesuai kebutuhan bisnis Anda.
               </p>
             </Reveal>
-            <a
+            <LocalLink
               href="/contact"
               className="group relative inline-flex h-12 w-full items-center justify-center rounded-xl bg-white/20 py-3.5 pr-16 pl-5 backdrop-blur-[8px] md:w-fit md:justify-start"
             >
@@ -76,7 +77,7 @@ export function Hero() {
               <span className="absolute top-1 right-1 flex size-10 items-center justify-center rounded-lg bg-brand p-2.5">
                 <ArrowRight className="size-5 text-white" />
               </span>
-            </a>
+            </LocalLink>
           </div>
         </div>
       </div>

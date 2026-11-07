@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Instrument_Sans, Great_Vibes } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/header";
 import { siteUrl } from "@/data/site";
 
@@ -16,9 +17,13 @@ export const metadata: Metadata = {
     "LiniWeb adalah software house di Surabaya yang berfokus pada jasa pembuatan website profesional, landing page, company profile, dan e-commerce.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export function generateStaticParams() { return [{ lang: "id" }, { lang: "en" }]; }
+
+export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
+  const { lang } = await params;
+  if (lang !== "id" && lang !== "en") notFound();
   return (
-    <html lang="id" className={`${manrope.variable} ${instrument.variable} ${script.variable}`}>
+    <html lang={lang} className={`${manrope.variable} ${instrument.variable} ${script.variable}`}>
       <body className="overflow-x-clip">
         <Header />
         {children}

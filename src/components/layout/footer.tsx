@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocalLink as Link } from "@/components/shared/local-link";
 import { Reveal } from "@/components/motion/reveal";
 import { LiniWebMark } from "@/components/icons";
 import { footerLinks } from "@/data/site";

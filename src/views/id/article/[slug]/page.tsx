@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocalLink as Link } from "@/components/shared/local-link";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/sections/article-card";
 import { Faq } from "@/components/sections/faq";
@@ -18,15 +18,15 @@ export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/article/[slug]">) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) notFound();
   const metadata = pageMetadata(`/article/${article.slug}`, `${article.title} | LiniWeb`, article.excerpt, article.image);
-  return { ...metadata, openGraph: { ...metadata.openGraph, type: "article", authors: [article.author] } };
+  return { ...metadata, openGraph: { ...metadata.openGraph, type: "article" as const, authors: [article.author] } };
 }
 
-export default async function ArticleDetail({ params }: PageProps<"/article/[slug]">) {
+export default async function ArticleDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) notFound();
@@ -37,8 +37,8 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
     headline: article.title,
     description: article.excerpt,
     image: new URL(article.image, siteUrl).href,
-    url: `${siteUrl}/article/${article.slug}`,
-    mainEntityOfPage: `${siteUrl}/article/${article.slug}`,
+    url: `${siteUrl}/id/article/${article.slug}`,
+    mainEntityOfPage: `${siteUrl}/id/article/${article.slug}`,
     inLanguage: "id-ID",
     author: { "@type": "Organization", name: article.author },
     publisher: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "LiniWeb", url: siteUrl },
@@ -58,7 +58,7 @@ export default async function ArticleDetail({ params }: PageProps<"/article/[slu
         <section className="flex w-full justify-center">
           <div className="flex w-full max-w-[810px] flex-col gap-6 px-4 pt-4 pb-16 md:gap-16 md:px-6 md:pt-6 md:pb-20 lg:pb-24">
             <Link
-              href="/article"
+              href="/id/article"
               className="group inline-flex w-fit items-center gap-2 text-ink"
             >
               <ArrowLeft className="size-4" />
